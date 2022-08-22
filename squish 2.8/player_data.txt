@@ -3,7 +3,7 @@ player
     base_color = 0xff0000
     kills = 2
     wins = 1
-    team = 0
+    team = 2
     is_cpu = false
     left = [-1, 1073741904]
     right = [-1, 1073741903]
@@ -18,7 +18,7 @@ player
     base_color = 0x00cc00
     kills = 0
     wins = 0
-    team = 0
+    team = 2
     is_cpu = true
     left = [0, 'axis', 0, -1]
     right = [0, 'axis', 0, 1]
@@ -33,7 +33,7 @@ player
     base_color = 0x0000ff
     kills = 1
     wins = 0
-    team = 0
+    team = 1
     is_cpu = true
     left = [1, 'axis', 0, -1]
     right = [1, 'axis', 0, 1]
@@ -46,9 +46,9 @@ player
 player
     name = Player 4
     base_color = 0xe600e6
-    kills = 4
-    wins = 1
-    team = 0
+    kills = 7
+    wins = 2
+    team = 4
     is_cpu = true
     left = [2, 'axis', 0, -1]
     right = [2, 'axis', 0, 1]
@@ -61,9 +61,9 @@ player
 player
     name = Player 5
     base_color = 0xffff00
-    kills = 2
-    wins = 0
-    team = 0
+    kills = 4
+    wins = 1
+    team = 4
     is_cpu = true
     left = [3, 'axis', 0, -1]
     right = [3, 'axis', 0, 1]
@@ -76,9 +76,9 @@ player
 player
     name = Player 6
     base_color = 0xff99cc
-    kills = 1
+    kills = 2
     wins = 0
-    team = 0
+    team = 3
     is_cpu = true
     left = [4, 'axis', 0, -1]
     right = [4, 'axis', 0, 1]
