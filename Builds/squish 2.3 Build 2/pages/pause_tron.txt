@@ -1,0 +1,38 @@
+settings
+    take_screenshot
+
+block
+    size = [x0.18, x0.267]
+    pos = [cx0.5, cx0.5]
+    color = 0x000000
+
+block
+    size = [x0.16, x0.23]
+    pos = [cx0.5, cx0.5]
+    color = 0x666666
+
+button
+    button_pos = [0, 0]
+    size = [x0.14, x0.07]
+    pos = [cx0.5, cx0.45]
+    active_color = 0x505050
+    text = 'Resume'
+    text_bold = true
+    text_size = 32
+    text_pos = [cx0.5, cx0.5]
+    action = resume_tron
+
+button
+    button_pos = [0, 1]
+    size = [x0.14, x0.07]
+    pos = [cx0.5, cx0.55]
+    active_color = 0x505050
+    text = 'Main Menu'
+    text_bold = true
+    text_size = 32
+    text_pos = [cx0.5, cx0.5]
+    action = goto:main
+
+control
+    trigger = back
+    action = resume_tron

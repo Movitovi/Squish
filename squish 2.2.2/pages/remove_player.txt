@@ -1,0 +1,59 @@
+block
+    size = [x1, x1]
+    pos = [0, 0]
+    color = 0xbbbbbb
+
+block
+    size = [x0.6, x0.8]
+    pos = [lx0.325, ux0.1]
+    color = 0x666666
+
+button
+    button_pos = [0, 0]
+    size = [x0.235, x0.07]
+    pos = [cx0.1625, ux0.7]
+    color = 0xbbbbbb
+    active_color = 0x888888
+    text = 'Cancel'
+    text_bold = true
+    text_size = 32
+    text_pos = [lx0.1, cx0.5]
+    action = goto:settings
+
+button
+    button_pos = [0, 1]
+    size = [x0.235, x0.07]
+    pos = [cx0.1625, ux0.8]
+    active_color = 0x888888
+    text = 'Remove All'
+    text_bold = true
+    text_size = 32
+    text_pos = [lx0.1, cx0.5]
+    action = delete:all_players
+    action = save_players
+    action = goto:settings
+
+list
+    type = player
+    size = [x0.58, x0.76]
+    pos = [lx0.335, ux0.12]
+    color = 0x666666
+    entry_size = [x1, x0.1]
+    entry_spacing = x0.02
+    entry_color = 0xbbbbbb
+    image_size = [match, x0.5]
+    image_pos = [cx0.05, cx0.5]
+    text = 'name'
+    text_bold = true
+    text_size = 32
+    text_pos = [lx0.1, cx0.5]
+    selectable = true
+    select_color = 0xbb0000
+    select_pos = [1, 0]
+    action = delete:player:from_list
+    action = save_players
+    action = goto:settings
+
+control
+    trigger = back
+    action = goto:settings

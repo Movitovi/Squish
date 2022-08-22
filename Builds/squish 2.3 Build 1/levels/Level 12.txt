@@ -1,0 +1,22 @@
+level
+    size = [192, 108]
+    background_color = 0xbbbbbb
+    player_size = [40.0, 40.0]
+    player_gravity = 30.0
+    player_jump_strength = 20.0
+    player_vel_terminal = [6.0, 20.0]
+    player_vel_delta = [1.2, 1.4]
+    vertical_looping = true
+    horizontal_looping = true
+    side_wall_depth = 80.0
+    player_shield_health_base = 70.0
+    player_shield_regen = 1.0
+
+player_pos = [75.89999999999999, 7.5]
+player_pos = [14.300000000000004, 7.5]
+
+block
+    size = [86.5, 15.0]
+    pos = [67.19999999999999, 67.5]
+    color = 0x990000
+    solid = true

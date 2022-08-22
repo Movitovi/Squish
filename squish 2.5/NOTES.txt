@@ -1,0 +1,23 @@
+# Teams mode
+# Ghost mode after death
+#       Possibility to revive
+#       Only check block collisions
+
+# Add computers
+#       Follow the nearest player horizontally
+#       If that player is above self try to jump
+#       If at an edge jump
+#       If a wall is in the way try to go above or below it if that is safe
+#       Don't fall into death
+#       Maybe track a player for a while
+#       Use randomness within the AI
+#       Shield when about to die or to stop vertical momentum
+#       Maybe add some sort of path finding
+
+# Tron cpu support
+
+# upgrade sound
+
+# Player count for default multiple players
+
+# Go through and remove potentials for mod by zero (specifically the level size being 0)

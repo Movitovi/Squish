@@ -1,0 +1,25 @@
+player
+    name = Player 1
+    base_color = 0xff0000
+    kills = 0
+    wins = 0
+    left = [-1, 97]
+    right = [-1, 100]
+    up = [-1, 119]
+    down = [-1, 115]
+    jump = [-1, 119]
+    shield = [-1, 1073742049]
+    ability = [-1, 1073742048]
+
+player
+    name = Player 2
+    base_color = 0x0000ff
+    kills = 0
+    wins = 1
+    left = [-1, 1073741904]
+    right = [-1, 1073741903]
+    up = [-1, 1073741906]
+    down = [-1, 1073741905]
+    jump = [-1, 1073741906]
+    shield = [-1, 1073742053]
+    ability = [-1, 1073742053]

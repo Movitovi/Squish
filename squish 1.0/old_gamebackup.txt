@@ -1,0 +1,45 @@
+type = game
+name = "squish"
+size = [768,512]
+
+type = player
+name = "player 1"
+color = 0xaa44ff
+pos = [128,256]
+size = [64,64]
+speed = 5
+acceleration = 1
+jump_strength = 15
+gravity = 25
+shield_health = 1
+shield_regen = 1
+
+type = player
+name = "player 2"
+color = 0xaa00ff
+pos = [228,256]
+size = [64,84]
+speed = 8
+acceleration = 6
+jump_strength = 25
+gravity = 5
+shield_health = 1
+shield_regen = 1
+
+type = block
+name = "background"
+color = 0xbbbbbb
+pos = [0,0]
+size = [768,512]
+solid = 0
+movable = 0
+gravity = 0
+
+type = block
+name = "stage"
+color = 0x777777
+pos = [64,320]
+size = [256,128]
+solid = 1
+movable = 0
+gravity = 0

@@ -1,0 +1,1 @@
+Squish is a multiplayer square brawler. Just download the download.zip file and extract it. Then run squish.py. There are a few more things I need to add before I'm done. But the present version is pretty much fully playable. -2022-Aug-21st

@@ -1,0 +1,92 @@
+block
+    size = [x1, x1]
+    pos = [0, 0]
+    color = 0xbbbbbb
+
+button
+    button_pos = [0, 0]
+    size = [x0.225, x0.07]
+    pos = [cx0.1625, ux0.12]
+    active_color = 0x888888
+    text = 'New Level'
+    text_bold = true
+    text_size = 32
+    text_pos = [lx0.1, cx0.5]
+    action = new:level
+    action = goto:level_data_setup
+
+button
+    button_pos = [0, 1]
+    size = [x0.225, x0.07]
+    pos = [cx0.1625, ux0.22]
+    active_color = 0x888888
+    text = 'Copy Level'
+    text_bold = true
+    text_size = 32
+    text_pos = [lx0.1, cx0.5]
+    action = goto:copy_level
+
+button
+    button_pos = [0, 2]
+    size = [x0.225, x0.07]
+    pos = [cx0.1625, ux0.32]
+    active_color = 0x888888
+    text = 'Delete Level'
+    text_bold = true
+    text_size = 32
+    text_pos = [lx0.1, cx0.5]
+    action = goto:delete_level
+
+button
+    button_pos = [0, 3]
+    size = [x0.225, x0.07]
+    pos = [cx0.1625, ux0.42]
+    active_color = 0x888888
+    text = 'Reload Levels'
+    text_bold = true
+    text_size = 32
+    text_pos = [lx0.1, cx0.5]
+    action = load_levels
+
+button
+    button_pos = [0, 4]
+    size = [x0.225, x0.07]
+    pos = [cx0.1625, ux0.52]
+    active_color = 0x888888
+    text = 'Back'
+    text_bold = true
+    text_size = 32
+    text_pos = [lx0.1, cx0.5]
+    action = goto:main
+
+block
+    size = [x0.6, x0.8]
+    pos = [lx0.325, ux0.1]
+    color = 0x666666
+
+list
+    type = level
+    size = [x0.58, x0.76]
+    pos = [lx0.335, ux0.12]
+    color = 0x666666
+    entry_size = [x1, x0.16]
+    entry_spacing = x0.03
+    entry_color = 0xbbbbbb
+    image_size = [x0.14, x0.75]
+    image_pos = [cx0.115, cx0.5]
+    frame_size = [x1.06, x1.1]
+    frame_pos = [cx0.5, cx0.5]
+    frame_color = 0x444444
+    text = 'name'
+    text_bold = true
+    text_size = 32
+    text_pos = [lx0.24, cx0.5]
+    selectable = true
+    select_color = 0x888888
+    select_pos = [1, 0]
+    action = select_level:from_list
+    action = goto:level_data_setup
+
+control
+    trigger = back
+    action = goto:main

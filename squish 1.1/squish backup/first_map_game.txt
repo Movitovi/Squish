@@ -1,0 +1,162 @@
+type = game
+name = "squish"
+size = [1024,768]
+
+type = player
+name = "player 0"
+color = 0xffff00
+pos = [512,320]
+size = [60,60]
+speed = 5
+acceleration = 1
+jump_strength = 15
+gravity = 25
+shield_health = 70
+shield_regen = 1
+
+type = player
+name = "player 1"
+color = 0x00ff00
+pos = [128,512]
+size = [60,60]
+speed = 5
+acceleration = 1
+jump_strength = 15
+gravity = 25
+shield_health = 70
+shield_regen = 1
+
+type = player
+name = "player 2"
+color = 0xffa500
+pos = [712,512]
+size = [60,60]
+speed = 5
+acceleration = 1
+jump_strength = 15
+gravity = 25
+shield_health = 70
+shield_regen = 1
+
+type = player
+name = "player 3"
+color = 0xaa00ff
+pos = [712,64]
+size = [60,60]
+speed = 5
+acceleration = 1
+jump_strength = 15
+gravity = 25
+shield_health = 70
+shield_regen = 1
+
+type = player
+name = "player 4"
+color = 0xff44bb
+pos = [128,320]
+size = [60,60]
+speed = 5
+acceleration = 1
+jump_strength = 15
+gravity = 25
+shield_health = 70
+shield_regen = 1
+
+type = block
+name = "background"
+color = 0xadd8e6
+pos = [0,0]
+size = [1024,768]
+solid = 0
+movable = 0
+gravity = 0
+
+type = block
+name = "bottom stage"
+color = 0x777777
+pos = [16,704]
+size = [940,32]
+solid = 1
+movable = 0
+gravity = 0
+
+type = block
+name = "stage"
+color = 0x777777
+pos = [32,384]
+size = [192,32]
+solid = 1
+movable = 0
+gravity = 0
+
+type = block
+name = "stage fat block"
+color = 0x777777
+pos = [512,448]
+size = [64,128]
+solid = 1
+movable = 0
+gravity = 0
+
+type = block
+name = "stage fat block 2"
+color = 0x777777
+pos = [512,170]
+size = [64,128]
+solid = 1
+movable = 0
+gravity = 0
+
+type = block
+name = "skinny stage"
+color = 0x777777
+pos = [420,500]
+size = [12,128]
+solid = 1
+movable = 0
+gravity = 0
+
+type = block
+name = "skinny stage"
+color = 0x777777
+pos = [300,340]
+size = [12,128]
+solid = 1
+movable = 0
+gravity = 0
+
+type = block
+name = "stage"
+color = 0x777777
+pos = [690,400]
+size = [192,16]
+solid = 1
+movable = 0
+gravity = 0
+
+type = block
+name = "stage far 2"
+color = 0x777777
+pos = [712,538]
+size = [320,16]
+solid = 1
+movable = 0
+gravity = 0
+
+type = block
+name = "stage far 1"
+color = 0x777777
+pos = [712,120]
+size = [320,16]
+solid = 1
+movable = 0
+gravity = 0
+
+type = block
+name = "top stage"
+color = 0x777777
+pos = [32,128]
+size = [260,16]
+solid = 1
+movable = 0
+gravity = 0

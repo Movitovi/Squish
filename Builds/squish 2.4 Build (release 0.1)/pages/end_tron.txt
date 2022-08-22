@@ -1,0 +1,102 @@
+settings
+    take_screenshot
+
+control
+    trigger = page_entrance
+    action = save_players
+
+block
+    size = [x0.75, x0.8]
+    pos = [cx0.5, cx0.5]
+    color = 0x000000
+
+block
+    size = [x0.73, x0.765]
+    pos = [cx0.5, cx0.5]
+    color = 0x666666
+
+block
+    size = [x0.225, x0.07]
+    pos = [cx0.5, cx0.22]
+    text = '{}ins'
+    text_variable = winner
+    text_variable_char_limit = 16
+    text_bold = true
+    text_size = 96
+    text_pos = [cx0.5, cx0.5]
+    text_dynamic_pos = true
+
+button
+    button_pos = [0, 0]
+    size = [x0.15, x0.07]
+    pos = [cx0.25, cx0.45]
+    active_color = 0x505050
+    text = 'Play Again'
+    text_bold = true
+    text_size = 32
+    text_pos = [lx0.1, cx0.5]
+    action = play_tron
+
+button
+    button_pos = [0, 1]
+    size = [x0.15, x0.07]
+    pos = [cx0.25, cx0.55]
+    active_color = 0x505050
+    text = 'Main Menu'
+    text_bold = true
+    text_size = 32
+    text_pos = [lx0.1, cx0.5]
+    action = stop_music
+    action = goto:main
+
+block
+    size = [x0.45, x0.52]
+    pos = [cx0.59, cx0.58]
+    color = 0x505050
+
+block
+    size = [x0.2, x0.07]
+    pos = [cx0.5, cx0.347]
+    text = 'Scoreboard'
+    text_bold = true
+    text_size = 32
+    text_pos = [cx0.5, cx0.5]
+
+block
+    size = [x0.2, x0.07]
+    pos = [cx0.64, cx0.347]
+    text = 'Wins'
+    text_bold = true
+    text_size = 32
+    text_pos = [cx0.5, cx0.5]
+
+block
+    size = [x0.2, x0.07]
+    pos = [cx0.735, cx0.347]
+    text = 'Kills'
+    text_bold = true
+    text_size = 32
+    text_pos = [cx0.5, cx0.5]
+
+list
+    type = score
+    size = [x0.435, x0.46]
+    pos = [cx0.59, cx0.598]
+    color = 0x505050
+    entry_size = [x1, x0.07]
+    entry_spacing = x0.005
+    entry_color = 0x4a4a4a
+    image_size = [match, x0.5]
+    image_pos = [cx0.02, cx0.5]
+    text = 'name'
+    text_bold = true
+    text_size = 32
+    text_pos = [lx0.05, cx0.5]
+    text_limit = [x0.19, x1]
+    wins_pos = [cx0.287, cx0.5]
+    kills_pos = [cx0.383, cx0.5]
+
+control
+    trigger = back
+    action = stop_music
+    action = goto:main

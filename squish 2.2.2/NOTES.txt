@@ -1,0 +1,56 @@
+# In snake a high enough score will show you a new or random special player
+
+# Scythe for no players
+#       Start with 10 or so sheep
+#       Wolves spawn randomly, but maybe add some sort of order to it so it isn't unfair
+#       Sheep walk randomly
+#       Wolves chase sheep
+#       Maybe wolves run from player
+#       Maybe give a gun or throwing scythe/boomerang type thing to the player
+#       Each tick a sheep is alive adds points
+#       Save top 10 scores
+
+# Boosts
+#       extra jump strength
+#       speed
+#       shifting through the floor
+#       tag to kill
+#       invincibility
+
+# Toggle windowed mode
+# Resizeable window
+
+# Special players:
+#       Sonic Blue for speed boost
+#       Mario Red or Luigi Green for jump boost
+#       Pac Man Yellow for new controls that simply move around the map but maybe can't go diagonally
+#       Link Green for something? Maybe an arrow
+#       Ness Yellow for PK fire ability
+#       Peach Pink for slow falling
+#       Game and Watch Black for pixely movement Make it only visual
+#       Duck Hunt Orange for jumping in the air
+#       Pikachu Yellow some sort of lightning move
+#       Yoshi Green shielding is an egg
+#       Kirby Pink for jumping in the air
+
+# Maybe TODOs
+# Add in control indication in add_player and maybe also in settings menu
+# Change vertical squishing to match horizontal squishing
+# Sound effects
+# Ghost mode after death
+#       Possibility to revive
+# Teams mode
+# Player count for default multiple players
+
+# Add computers
+#       Follow the nearest player horizontally
+#       If that player is above self try to jump
+#       If at an edge jump
+#       If a wall is in the way try to go above or below it if that is safe
+#       Don't fall into death
+#       Maybe track a player for a while
+#       Use randomness within the AI
+#       Shield when about to die or to stop vertical momentum
+#       Maybe add some sort of path finding
+
+# If a level is named tron then that level plays tron for multiple players

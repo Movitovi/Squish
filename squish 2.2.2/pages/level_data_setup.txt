@@ -1,0 +1,270 @@
+settings
+    dont_direct_horizontal_cursor
+
+block
+    size = [x1, x1]
+    pos = [0, 0]
+    color = 0xbbbbbb
+
+block
+    size = [x0.51, x0.085]
+    pos = [cx0.5, cx0.35]
+    color = 0xa0a0a0
+
+# Name: string
+button
+    button_pos = [0, 0]
+    size = [x0.51, x0.07]
+    pos = [cx0.5, cx0.15]
+    active_color = 0x888888
+    text_active_color = 0x999966
+    text = 'Name: '
+    text_bold = true
+    text_size = 32
+    text_pos = [lx0.04, cx0.5]
+    action = input:level:name
+
+# Width: int
+button
+    button_pos = [0, 1]
+    size = [x0.24, x0.07]
+    pos = [lx0.245, cx0.25]
+    active_color = 0x888888
+    text_active_color = 0x999966
+    text = 'Width: '
+    text_bold = true
+    text_size = 32
+    text_pos = [lx0.087, cx0.5]
+    action = input:level:width
+
+# Height: int
+button
+    button_pos = [1, 1]
+    size = [x0.24, x0.07]
+    pos = [rx0.755, cx0.25]
+    active_color = 0x888888
+    text_active_color = 0x999966
+    text = 'Height: '
+    text_bold = true
+    text_size = 32
+    text_pos = [lx0.087, cx0.5]
+    action = input:level:height
+
+# 0 0 0 0 0 0 0 0 0 0 color presets
+button
+    button_pos = [0, 2]
+    size = [x0.041, x0.07]
+    pos = [cx0.2705, cx0.35]
+    active_color = 0x888888
+    text = '■'
+    text_color = 0xf7f7f7
+    text_size = 96
+    text_pos = [cx0.5, cx0.555]
+    action = set:level:background_color:0xf7f7f7
+
+button
+    button_pos = [1, 2]
+    size = [x0.041, x0.07]
+    pos = [cx0.3215, cx0.35]
+    active_color = 0x888888
+    text = '■'
+    text_color = 0xbbbbbb
+    text_bold = true
+    text_size = 96
+    text_pos = [cx0.5, cx0.555]
+    action = set:level:background_color:0xbbbbbb
+
+button
+    button_pos = [2, 2]
+    size = [x0.041, x0.07]
+    pos = [cx0.3725, cx0.35]
+    active_color = 0x888888
+    text = '■'
+    text_color = 0x888888
+    text_size = 96
+    text_pos = [cx0.5, cx0.555]
+    action = set:level:background_color:0x888888
+
+button
+    button_pos = [3, 2]
+    size = [x0.041, x0.07]
+    pos = [cx0.4235, cx0.35]
+    active_color = 0x888888
+    text = '■'
+    text_color = 0x000000
+    text_size = 96
+    text_pos = [cx0.5, cx0.555]
+    action = set:level:background_color:0x000000
+
+button
+    button_pos = [4, 2]
+    size = [x0.041, x0.07]
+    pos = [cx0.4745, cx0.35]
+    active_color = 0x888888
+    text = '■'
+    text_color = 0xdc7633
+    text_size = 96
+    text_pos = [cx0.5, cx0.555]
+    action = set:level:background_color:0xdc7633
+
+button
+    button_pos = [5, 2]
+    size = [x0.041, x0.07]
+    pos = [cx0.5255, cx0.35]
+    active_color = 0x888888
+    text = '■'
+    text_color = 0x45b39d
+    text_size = 96
+    text_pos = [cx0.5, cx0.555]
+    action = set:level:background_color:0x45b39d
+
+
+button
+    button_pos = [6, 2]
+    size = [x0.041, x0.07]
+    pos = [cx0.5765, cx0.35]
+    active_color = 0x888888
+    text = '■'
+    text_color = 0x2e86c1
+    text_size = 96
+    text_pos = [cx0.5, cx0.555]
+    action = set:level:background_color:0x2e86c1
+
+button
+    button_pos = [7, 2]
+    size = [x0.041, x0.07]
+    pos = [cx0.6275, cx0.35]
+    active_color = 0x888888
+    text = '■'
+    text_color = 0xaf7ac5
+    text_size = 96
+    text_pos = [cx0.5, cx0.555]
+    action = set:level:background_color:0xaf7ac5
+
+button
+    button_pos = [8, 2]
+    size = [x0.041, x0.07]
+    pos = [cx0.6785, cx0.35]
+    active_color = 0x888888
+    text = '■'
+    text_color = 0xcd6155
+    text_size = 96
+    text_pos = [cx0.5, cx0.555]
+    action = set:level:background_color:0xcd6155
+
+button
+    button_pos = [9, 2]
+    size = [x0.041, x0.07]
+    pos = [cx0.7295, cx0.35]
+    active_color = 0x888888
+    text = '■'
+    text_color = 0xf1c40f
+    text_size = 96
+    text_pos = [cx0.5, cx0.555]
+    action = set:level:background_color:0xf1c40f
+
+# Background color: color
+button
+    button_pos = [0, 3]
+    size = [x0.51, x0.07]
+    pos = [cx0.5, cx0.45]
+    active_color = 0x888888
+    text_active_color = 0x999966
+    text = 'Background Color: '
+    text_bold = true
+    text_size = 32
+    text_pos = [lx0.04, cx0.5]
+    action = input:level:background_color:6
+
+# Background color display
+button
+    size = [x0.054, x0.053]
+    pos = [cx0.7, cx0.45]
+    color = 0xa0a0a0
+    active_color = 0xa0a0a0
+
+button
+    size = [x0.045, x0.04]
+    pos = [cx0.7, cx0.45]
+    dynamic_color = level:background_color
+
+# Vertical Looping: bool
+button
+    button_pos = [0, 4]
+    size = [x0.24, x0.07]
+    pos = [lx0.245, cx0.55]
+    active_color = 0x888888
+    text = 'Vert. Looping: '
+    text_bold = true
+    text_size = 32
+    text_pos = [lx0.087, cx0.5]
+    action = toggle:level:vertical_looping
+
+# Horizontal Looping: bool
+button
+    button_pos = [1, 4]
+    size = [x0.24, x0.07]
+    pos = [rx0.755, cx0.55]
+    active_color = 0x888888
+    text = 'Horz. Looping: '
+    text_bold = true
+    text_size = 32
+    text_pos = [lx0.087, cx0.5]
+    action = toggle:level:horizontal_looping
+
+# Side Wall Depth: float (0-100)%
+button
+    button_pos = [0, 5]
+    size = [x0.51, x0.07]
+    pos = [cx0.5, cx0.65]
+    active_color = 0x888888
+    text_active_color = 0x999966
+    text = 'Side Wall Depth: '
+    text_bold = true
+    text_size = 32
+    text_pos = [lx0.04, cx0.5]
+    action = input:level:side_wall_depth
+
+# Back button
+button
+    button_pos = [1, 6]
+    size = [x0.24, x0.07]
+    pos = [lx0.245, cx0.75]
+    active_color = 0x888888
+    text = 'Back'
+    text_bold = true
+    text_size = 32
+    text_pos = [cx0.5, cx0.5]
+#    action = delete:level
+    action = load_levels
+    action = goto:level_editor_menu
+
+# Continue to player settings
+button
+    button_pos = [0, 6]
+    size = [x0.24, x0.07]
+    pos = [rx0.755, cx0.75]
+    active_color = 0x888888
+    text = 'Continue'
+    text_bold = true
+    text_size = 32
+    text_pos = [cx0.5, cx0.5]
+    action = goto:player_data_setup
+
+#        Player Data
+# Width: float
+# Height: float
+# Gravity: float
+# Jump Strength: float
+# Terminal Velocity
+#                x, y: float, float
+# Delta Velocity
+#                x, y: float, float
+# Shield Health: float
+# Shield Regen: float
+
+control
+    trigger = back
+#    action = delete:level
+    action = load_levels
+    action = goto:level_editor_menu

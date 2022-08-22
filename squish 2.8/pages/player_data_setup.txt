@@ -1,0 +1,164 @@
+block
+    size = [x1, x1]
+    pos = [0, 0]
+    color = 0xbbbbbb
+
+# Width: float
+button
+    button_pos = [0, 0]
+    size = [x0.24, x0.07]
+    pos = [lx0.245, cx0.15]
+    active_color = 0x888888
+    text_active_color = 0x999966
+    text = 'Player Width: '
+    text_bold = true
+    text_size = 32
+    text_pos = [lx0.087, cx0.5]
+    action = input:player:width
+
+# Height: float
+button
+    button_pos = [1, 0]
+    size = [x0.24, x0.07]
+    pos = [rx0.755, cx0.15]
+    active_color = 0x888888
+    text_active_color = 0x999966
+    text = 'Player Height: '
+    text_bold = true
+    text_size = 32
+    text_pos = [lx0.087, cx0.5]
+    action = input:player:height
+
+# Gravity: float
+button
+    button_pos = [0, 1]
+    size = [x0.51, x0.07]
+    pos = [cx0.5, cx0.25]
+    active_color = 0x888888
+    text_active_color = 0x999966
+    text = 'Gravity: '
+    text_bold = true
+    text_size = 32
+    text_pos = [lx0.04, cx0.5]
+    action = input:player:gravity
+
+# Jump Strength: float
+button
+    button_pos = [0, 2]
+    size = [x0.51, x0.07]
+    pos = [cx0.5, cx0.35]
+    active_color = 0x888888
+    text_active_color = 0x999966
+    text = 'Jump Strength: '
+    text_bold = true
+    text_size = 32
+    text_pos = [lx0.04, cx0.5]
+    action = input:player:jump_strength
+
+# Terminal Velocity y: float
+button
+    button_pos = [0, 3]
+    size = [x0.24, x0.07]
+    pos = [lx0.245, cx0.45]
+    active_color = 0x888888
+    text_active_color = 0x999966
+    text = 'Terminal y Vel.: '
+    text_bold = true
+    text_size = 32
+    text_pos = [lx0.087, cx0.5]
+    action = input:player:y_vel_terminal
+
+# Terminal Velocity x: float
+button
+    button_pos = [1, 3]
+    size = [x0.24, x0.07]
+    pos = [rx0.755, cx0.45]
+    active_color = 0x888888
+    text_active_color = 0x999966
+    text = 'Terminal x Vel.: '
+    text_bold = true
+    text_size = 32
+    text_pos = [lx0.087, cx0.5]
+    action = input:player:x_vel_terminal
+
+# Delta Velocity y: float
+button
+    button_pos = [0, 4]
+    size = [x0.24, x0.07]
+    pos = [lx0.245, cx0.55]
+    active_color = 0x888888
+    text_active_color = 0x999966
+    text = 'Delta y Vel.: '
+    text_bold = true
+    text_size = 32
+    text_pos = [lx0.087, cx0.5]
+    action = input:player:y_vel_delta
+
+# Delta Velocity x: float
+button
+    button_pos = [1, 4]
+    size = [x0.24, x0.07]
+    pos = [rx0.755, cx0.55]
+    active_color = 0x888888
+    text_active_color = 0x999966
+    text = 'Delta x Vel.: '
+    text_bold = true
+    text_size = 32
+    text_pos = [lx0.087, cx0.5]
+    action = input:player:x_vel_delta
+
+# Shield Health: float
+button
+    button_pos = [0, 5]
+    size = [x0.24, x0.07]
+    pos = [lx0.245, cx0.65]
+    active_color = 0x888888
+    text_active_color = 0x999966
+    text = 'Shield Health: '
+    text_bold = true
+    text_size = 32
+    text_pos = [lx0.087, cx0.5]
+    action = input:player:shield_health
+
+# Shield Regen: float
+button
+    button_pos = [1, 5]
+    size = [x0.24, x0.07]
+    pos = [rx0.755, cx0.65]
+    active_color = 0x888888
+    text_active_color = 0x999966
+    text = 'Shield Regen.: '
+    text_bold = true
+    text_size = 32
+    text_pos = [lx0.087, cx0.5]
+    action = input:player:shield_regen
+
+# Back button
+button
+    button_pos = [0, 6]
+    size = [x0.24, x0.07]
+    pos = [lx0.245, cx0.75]
+    active_color = 0x888888
+    text = 'Back'
+    text_bold = true
+    text_size = 32
+    text_pos = [cx0.5, cx0.5]
+    action = goto:level_data_setup
+
+# Continue to player settings
+button
+    button_pos = [1, 6]
+    size = [x0.24, x0.07]
+    pos = [rx0.755, cx0.75]
+    active_color = 0x888888
+    text = 'Done'
+    text_bold = true
+    text_size = 32
+    text_pos = [cx0.5, cx0.5]
+    action = save_level
+    action = reset_editor
+    action = edit_level
+
+control
+    trigger = back
+    action = goto:level_data_setup

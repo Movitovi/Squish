@@ -1,0 +1,69 @@
+# Fixed fps update rectangle size to be correct for tron and other sized levels
+# Fixed Game and Watch update rectangle over the last pos
+# Made padding slightly larger in update rectangles to (unconfirmed) remove risidual blits during screen wrapping
+# Fixed update rectangles for dead arrows, fire, and zaps
+# Fixed players stretching wide on the moon level (unconfirmed) by checking size compared to base size in the squish function
+# The fps sometimes is captured in a screenshot (may have been resolved)
+# Now show the red line above blocks
+# Moved level data setup continue/done and back cursor positions
+# Now rounds player positions in level editor
+# Changed blocks to wrap when appropriate
+# Allows editor to click on the wrapped part of a block
+# Added bowser
+# Added ceiling on levels without vertical looping
+# Added pause on entrance into pause or result pages
+# Fixed eraser in level editor wrapping when it shouldn't
+# Fixed level editor size bugs with eraser and update rectangles
+# Fixed issues with invincibility rectangles appearance
+
+# Teams mode
+#       Select number of teams in the level select
+#       The next page should choose the teams
+#       Autofill after all players choose a team
+#       Maintain the same teams even after closing the game
+
+# Create 5 lists in a + shape
+# The center is no team/team 0
+# Left  is 1 red
+# Right is 2 blue
+# Up    is 3 green
+# Down  is 4 purple
+
+# Player pressed direction to select team and this does not affect menu navigation
+# Player can affect menu navigation after selecting a team
+# Press the shield/ability button to deselect team
+# Apply menu navigation pause for controllers
+
+# Give players vertical bands on the side to match their team color
+# End game when 1 team is left
+# Show that team's color name on the victory screen
+
+# Do this for tron also
+# Make tron accents team color
+
+
+# Not implemented
+
+# Ghost mode after death
+#       Only check block collisions
+
+# Add computers
+#       Follow the nearest player horizontally
+#       If that player is above self try to jump
+#       If at an edge jump
+#       If a wall is in the way try to go above or below it if that is safe
+#       Don't fall into death
+#       Maybe track a player for a while
+#       Use randomness within the AI
+#       Shield when about to die or to stop vertical momentum
+#       Maybe add some sort of path finding
+#       Tron cpu support
+
+# Upgrade sound
+# Go through and remove potentials for mod by zero (specifically the level size being 0)
+# Comment the code
+# Maybe comment the pages
+# Maybe reasign controllers to players without remapping everybody
+# Need to organize github
+# Make more levels
+# Maybe make a user manual

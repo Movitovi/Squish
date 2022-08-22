@@ -1,0 +1,79 @@
+settings
+    take_screenshot
+
+block
+    size = [x0.58, x0.835]
+    pos = [cx0.5, cx0.5]
+    color = 0x5e3926
+
+block
+    size = [x0.56, x0.8]
+    pos = [cx0.5, cx0.5]
+    color = 0xab6a47
+
+block
+    size = [x0.225, x0.07]
+    pos = [cx0.5, cx0.17]
+    text = 'Score: {}'
+    text_variable = snake_score
+    text_bold = true
+    text_size = 96
+    text_pos = [cx0.5, cx0.5]
+    text_dynamic_pos = true
+
+button
+    button_pos = [0, 0]
+    size = [x0.2, x0.07]
+    pos = [cx0.375, cx0.838]
+    active_color = 0x7b4d33
+    text = 'Play Again'
+    text_bold = true
+    text_size = 32
+    text_pos = [cx0.5, cx0.5]
+    action = play_snake
+
+button
+    button_pos = [1, 0]
+    size = [x0.2, x0.07]
+    pos = [cx0.625, cx0.838]
+    active_color = 0x7b4d33
+    text = 'Main Menu'
+    text_bold = true
+    text_size = 32
+    text_pos = [cx0.5, cx0.5]
+    action = goto:main
+
+block
+    size = [x0.5, x0.53]
+    pos = [cx0.5, cx0.51]
+    color = 0x5e3926
+
+block
+    size = [x0.2, x0.07]
+    pos = [cx0.5, cx0.278]
+    text = 'High Score'
+    text_bold = true
+    text_size = 32
+    text_pos = [cx0.5, cx0.5]
+
+list
+    type = snake_score
+    size = [x0.47, x0.44]
+    pos = [cx0.5, cx0.53]
+    color = 0x5e3926
+    entry_size = [x1, x0.07]
+    entry_spacing = x0.012
+    entry_color = 0x7b4d33
+    image_size = [match, x0.5]
+    image_pos = [cx0.1, cx0.5]
+    text = 'name'
+    text_bold = true
+    text_size = 32
+    text_pos = [lx0.145, cx0.5]
+    text_limit = [x0.17, x1]
+    rank_pos = [rx0.08, cx0.5]
+    score_pos = [rx0.425, cx0.5]
+
+control
+    trigger = back
+    action = goto:main

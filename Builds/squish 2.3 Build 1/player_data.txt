@@ -1,0 +1,32 @@
+player
+    name = Player 1
+    base_color = 0xe600e6
+    kills = 0
+    wins = 0
+    left = [1, 'axis', 0, -1]
+    right = [1, 'axis', 0, 1]
+    jump = [1, 'button', 0, 1]
+    shield = [1, 'axis', 5, 1]
+    ability = [1, 'button', 4, 1]
+
+player
+    name = Player 2
+    base_color = 0xffff00
+    kills = 2
+    wins = 0
+    left = [0, 'axis', 0, -1]
+    right = [0, 'axis', 0, 1]
+    jump = [0, 'button', 0, 1]
+    shield = [0, 'axis', 5, 1]
+    ability = [0, 'button', 4, 1]
+
+player
+    name = Player 3
+    base_color = 0x0000ff
+    kills = 10
+    wins = 6
+    left = [-1, 1073741904]
+    right = [-1, 1073741903]
+    jump = [-1, 1073741906]
+    shield = [-1, 1073741905]
+    ability = [-1, 1073741905]

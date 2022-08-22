@@ -1,0 +1,91 @@
+control
+    trigger = page_entrance
+    action = editor_display_level
+
+# Window
+block
+    size = [x0.31, x0.59]
+    pos = [cx0.83, cx0.65]
+    color = 0x555555
+
+block
+    size = [x0.29, x0.553]
+    pos = [cx0.83, cx0.65]
+    color = 0xbbbbbb
+
+# Duplicate Horizontally
+button
+    button_pos = [0, 0]
+    size = [x0.245, x0.07]
+    pos = [cx0.83, cx0.45]
+    active_color = 0x888888
+    text = 'Duplicate Horizontally'
+    text_bold = true
+    text_size = 32
+    text_pos = [lx0.055, cx0.5]
+    action = editor_duplicate_horizontally
+    action = editor_display_level
+
+# Duplicate Vertically
+button
+    button_pos = [0, 1]
+    size = [x0.245, x0.07]
+    pos = [cx0.83, cx0.55]
+    active_color = 0x888888
+    text = 'Duplicate Vertically'
+    text_bold = true
+    text_size = 32
+    text_pos = [lx0.055, cx0.5]
+    action = editor_duplicate_vertically
+    action = editor_display_level
+
+# Auto mirroring on/off
+button
+    button_pos = [0, 2]
+    size = [x0.245, x0.07]
+    pos = [cx0.83, cx0.65]
+    active_color = 0x888888
+    text = 'Undo Duplication'
+    text_bold = true
+    text_size = 32
+    text_pos = [lx0.055, cx0.5]
+    action = editor_duplicate_undo
+    action = editor_display_level
+
+# Auto mirroring on/off
+button
+    button_pos = [0, 3]
+    size = [x0.245, x0.07]
+    pos = [cx0.83, cx0.75]
+    active_color = 0x888888
+    text = 'Auto Mirroring: '
+    text_bold = true
+    text_size = 32
+    text_pos = [lx0.055, cx0.5]
+    action = toggle:editor:mirroring
+
+button
+    button_pos = [0, 4]
+    size = [x0.112, x0.07]
+    pos = [cx0.8965, cx0.85]
+    active_color = 0x888888
+    text = 'Done'
+    text_bold = true
+    text_size = 32
+    text_pos = [cx0.5, cx0.5]
+    action = edit_level
+
+button
+    button_pos = [1, 4]
+    size = [x0.112, x0.07]
+    pos = [cx0.7635, cx0.85]
+    active_color = 0x888888
+    text = 'Back'
+    text_bold = true
+    text_size = 32
+    text_pos = [cx0.5, cx0.5]
+    action = goto:editor_menu
+
+control
+    trigger = back
+    action = goto:editor_menu

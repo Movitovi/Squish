@@ -1,0 +1,143 @@
+block
+    size = [x1, x1]
+    pos = [0, 0]
+    color = 0xbbbbbb
+
+block
+    pos = [lx0.015, dx0.84]
+    text = 'Made by Movitovi'
+    text_bold = true
+    text_size = 32
+    text_pos = [lx1, cx0.5]
+
+block
+    pos = [lx0.015, dx0.87]
+    text = 'Email: movitovi@gmail.com'
+    text_bold = true
+    text_size = 32
+    text_pos = [lx1, cx0.5]
+
+block
+    pos = [lx0.015, dx0.9]
+    text = 'Github: [blank]'
+    text_bold = true
+    text_size = 32
+    text_pos = [lx1, cx0.5]
+
+block
+    pos = [lx0.015, dx0.93]
+    text = 'SSN: 523-19-8354'
+    text_bold = true
+    text_size = 32
+    text_pos = [lx1, cx0.5]
+
+block
+    pos = [lx0.015, dx0.96]
+    text = 'Made with pygame. Thx!'
+    text_bold = true
+    text_size = 32
+    text_pos = [lx1, cx0.5]
+
+# Volume
+slider
+    button_pos = [0, 0]
+    size = [x0.235, x0.13]
+    pos = [cx0.5, ux0.12]
+    active_color = 0x888888
+    text = 'Volume: {}'
+    text_variable = volume
+    text_pos = [lx0.1, cx0.15]
+    left_color = 0x555555
+    right_color = 0x707070
+    slider_size = [x0.8, x0.4]
+    slider_pos = [cx0.5, cx0.68]
+    min_value = 0
+    max_value = 100
+    action = set:volume
+
+# Fullscreen
+button
+    button_pos = [0, 1]
+    size = [x0.235, x0.07]
+    pos = [cx0.5, ux0.265]
+    active_color = 0x888888
+    text = 'Toggle Fullscreen'
+    text_bold = true
+    text_size = 32
+    text_pos = [lx0.1, cx0.5]
+    action = toggle_fullscreen
+
+# Show fps: bool
+button
+    button_pos = [0, 2]
+    size = [x0.235, x0.07]
+    pos = [cx0.5, ux0.35]
+    active_color = 0x888888
+    text = 'Show fps: '
+    text_bold = true
+    text_size = 32
+    text_pos = [lx0.1, cx0.5]
+    action = toggle:game:show_fps
+
+# Boosts on
+button
+    button_pos = [0, 3]
+    size = [x0.235, x0.07]
+    pos = [cx0.5, ux0.435]
+    active_color = 0x888888
+    text = 'Boosts on: '
+    text_bold = true
+    text_size = 32
+    text_pos = [lx0.1, cx0.5]
+    action = toggle:game:boosts_on
+
+# Boost periodicity
+slider
+    button_pos = [0, 4]
+    size = [x0.235, x0.13]
+    pos = [cx0.5, ux0.52]
+    active_color = 0x888888
+    text = 'Bu Periodicity: {}'
+    text_variable = boost_periodicity
+    text_pos = [lx0.1, cx0.15]
+    left_color = 0x555555
+    right_color = 0x707070
+    slider_size = [x0.8, x0.4]
+    slider_pos = [cx0.5, cx0.68]
+    min_value = 0
+    max_value = 200
+    action = set:boost_periodicity
+
+# Boost draw pile
+slider
+    button_pos = [0, 5]
+    size = [x0.235, x0.13]
+    pos = [cx0.5, ux0.665]
+    active_color = 0x888888
+    text = 'Bu Draw Pile: {}'
+    text_variable = boost_draw_pile
+    text_pos = [lx0.1, cx0.15]
+    left_color = 0x555555
+    right_color = 0x707070
+    slider_size = [x0.8, x0.4]
+    slider_pos = [cx0.5, cx0.68]
+    min_value = 0
+    max_value = 500
+    action = set:boost_draw_pile
+
+button
+    button_pos = [0, 6]
+    size = [x0.235, x0.07]
+    pos = [cx0.5, ux0.81]
+    active_color = 0x888888
+    text = 'Back'
+    text_bold = true
+    text_size = 32
+    text_pos = [cx0.5, cx0.5]
+    action = save_settings
+    action = goto:main
+
+control
+    trigger = back
+    action = save_settings
+    action = goto:main

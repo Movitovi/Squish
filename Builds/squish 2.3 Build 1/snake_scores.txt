@@ -1,0 +1,10 @@
+55, Player 1, 0xe600e6
+45, Snake Master, 0x0000ff
+22, Player 1, 0xff0000
+19, SNEKE, 0xdd7700
+18, Snake Master, 0x0000ff
+16, Player 1, 0xe600e6
+16, First, 0x9966ff
+14, Player 1, 0xe600e6
+10, Snake Master, 0x0000ff
+10, Player 1, 0xff0000

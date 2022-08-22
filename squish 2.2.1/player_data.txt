@@ -1,0 +1,32 @@
+player
+    name = EndNinja08
+    base_color = 0xff0000
+    kills = 5
+    wins = 5
+    left = [1, 'axis', 0, -1]
+    right = [1, 'axis', 0, 1]
+    jump = [1, 'button', 0, 1]
+    shield = [1, 'axis', 5, 1]
+    ability = [1, 'axis', 4, 1]
+
+player
+    name = Winner
+    base_color = 0x0000ff
+    kills = 12
+    wins = 10
+    left = [0, 'axis', 0, -1]
+    right = [0, 'axis', 0, 1]
+    jump = [0, 'button', 0, 1]
+    shield = [0, 'axis', 4, 1]
+    ability = [0, 'axis', 5, 1]
+
+player
+    name = Player 3
+    base_color = 0xe600e6
+    kills = 0
+    wins = 0
+    left = [-1, 1073741904]
+    right = [-1, 1073741904]
+    jump = [-1, 1073741904]
+    shield = [-1, 1073741904]
+    ability = [-1, 1073741904]

@@ -1,0 +1,26 @@
+control
+    trigger = page_entrance
+    action = reset_mapping
+
+block
+    size = [x1, x1]
+    pos = [0, 0]
+    color = 0xbbbbbb
+
+block
+    size = [x0.225, x0.07]
+    pos = [cx0.5, cx0.5]
+    text = 'Press {}'
+    text_variable = present_map
+    text_bold = true
+    text_size = 128
+    text_pos = [cx0.5, cx0.5]
+    text_dynamic_pos = true
+
+control
+    trigger = continual
+    action = map_controls
+
+control
+    trigger = back
+    action = goto:add_player

@@ -1,0 +1,62 @@
+block
+pos = [0, 0]
+size = [rx1, rx1]
+color = 0xbbbbbb
+
+block
+pos = [cx0.5, cx0.2]
+text = 'squish'
+text_color = 0x000000
+text_size = 128
+
+button
+button_pos = [0, 0]
+pos = [cx0.5, cx0.4]
+size = [x0.1, x0.1]
+active_color = 0x888888
+inactive_color = 0x000000
+text = 'Play'
+text_color = 0x000000
+text_size = 32
+text_bold = true
+text_pos = [cx0.5, cx0.5]
+action = goto 'level_select'
+
+button
+button_pos = [1, 0]
+pos = [cx0.5, cx0.5]
+size = [x0.1, x0.1]
+active_color = 0x888888
+inactive_color = 0x000000
+text = 'Level Editor'
+text_color = 0x000000
+text_size = 32
+text_bold = true
+text_pos = [cx0.5, cx0.5]
+action = goto 'level_editor'
+
+button
+button_pos = [2, 0]
+pos = [cx0.5, cx0.6]
+size = [x0.1, x0.1]
+active_color = 0x888888
+inactive_color = 0x000000
+text = 'Settings'
+text_color = 0x000000
+text_size = 32
+text_bold = true
+text_pos = [cx0.5, cx0.5]
+action = goto 'settings'
+
+button
+button_pos = [3, 0]
+pos = [cx0.5, cx0.7]
+size = [x0.1, x0.1]
+active_color = 0x888888
+inactive_color = 0x000000
+text = 'Quit'
+text_color = 0x000000
+text_size = 32
+text_bold = true
+text_pos = [cx0.5, cx0.5]
+action = quit

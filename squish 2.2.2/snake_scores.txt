@@ -1,0 +1,10 @@
+45, Snake Master, 0x0000ff
+19, SNEKE, 0xdd7700
+18, Snake Master, 0x0000ff
+16, First, 0x9966ff
+10, Snake Master, 0x0000ff
+9, Snake Master, 0x0000ff
+8, Snake Master, 0x0000ff
+5, Snake Master, 0x0000ff
+4, Snake Master, 0x0000ff
+4, Snake Master, 0x0000ff

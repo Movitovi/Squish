@@ -1,0 +1,21 @@
+block
+    size = [x1, x1]
+    pos = [0, 0]
+    color = 0xbbbbbb
+    alpha = 5
+
+block
+    size = [x0.225, x0.07]
+    pos = [cx0.5, cx0.5]
+    text = 'No Players'
+    text_bold = true
+    text_size = 128
+    text_pos = [cx0.5, cx0.5]
+
+control
+    trigger = select
+    action = goto:main
+
+control
+    trigger = back
+    action = goto:main

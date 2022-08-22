@@ -1,0 +1,8 @@
+volume = 100
+fullscreen = false
+show_fps = true
+boosts_on = true
+boost_periodicity = 127
+boost_draw_pile = 125
+required_snake_score = 50
+required_scythe_score = 150

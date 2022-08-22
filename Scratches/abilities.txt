@@ -1,0 +1,13 @@
+# Special players:
+#           'Sonic 0x0000ff' speed boost
+#           'Mario 0xff0000' jump boost
+#           'Luigi 0x00cc00' jump boost
+#           'Pac Man 0xffff00' move up, down, left, or right
+#           'Link 0x008800' something? Maybe an arrow
+#           'Ness 0x888800' PK fire ability
+#           'Peach 0xff8888' slow falling
+#           'Game and Watch 0x000000' pixely movement Make it only visual
+#           'Duck Hunt 0xff9900' jumping in the air
+#           'Pikachu 0xffff00' some sort of lightning move
+#           'Yoshi 0x00aa00' shielding is an egg
+#           'Kirby 0xff99cc' jumping in the air

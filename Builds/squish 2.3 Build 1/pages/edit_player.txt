@@ -1,0 +1,70 @@
+settings
+    dont_direct_horizontal_cursor
+
+control
+    trigger = page_entrance
+    action = draw_alpha:0xbbbbbb:100
+
+# Window
+block
+    size = [x0.49, x0.817]
+    pos = [cx0.5, cx0.5]
+    color = 0x555555
+
+block
+    size = [x0.47, x0.78]
+    pos = [cx0.5, cx0.5]
+    color = 0xbbbbbb
+
+# X Pos: float
+button
+    button_pos = [0, 0]
+    size = [x0.19, x0.07]
+    pos = [cx0.3885, cx0.21]
+    active_color = 0x888888
+    text_active_color = 0x999966
+    text = 'X Pos.: '
+    text_bold = true
+    text_size = 32
+    text_pos = [lx0.087, cx0.5]
+    action = input:editor:player:x_pos
+
+# Y Pos: float
+button
+    button_pos = [1, 0]
+    size = [x0.19, x0.07]
+    pos = [cx0.6115, cx0.21]
+    active_color = 0x888888
+    text_active_color = 0x999966
+    text = 'Y Pos.: '
+    text_bold = true
+    text_size = 32
+    text_pos = [lx0.087, cx0.5]
+    action = input:editor:player:y_pos
+
+button
+    button_pos = [0, 1]
+    size = [x0.19, x0.07]
+    pos = [cx0.6115, cx0.81]
+    active_color = 0x888888
+    text = 'Done'
+    text_bold = true
+    text_size = 32
+    text_pos = [cx0.5, cx0.5]
+    action = update_edited_player
+    action = edit_level
+
+button
+    button_pos = [1, 1]
+    size = [x0.19, x0.07]
+    pos = [cx0.3885, cx0.81]
+    active_color = 0x888888
+    text = 'Cancel'
+    text_bold = true
+    text_size = 32
+    text_pos = [cx0.5, cx0.5]
+    action = edit_level
+
+control
+    trigger = back
+    action = edit_level

@@ -1,0 +1,53 @@
+# Gravity: float
+# Jump Strength: float
+# Terminal Velocity
+#                x, y: float, float
+# Delta Velocity
+#                x, y: float, float
+# Shield Health: float
+# Shield Regen: float
+
+# Fix clicking on a level then going back deletes the level
+
+# level_editor
+    # Have a toolbox at the bottom of the screen that can be hidden for access behind it
+        # Add block
+            # Set color
+            # Click corner and drag to desired size
+        # Add player spawn point
+            # Set position
+            # Prevent overlap by shifting player up
+            # Show preview
+        # Click to hide toolbox and move existing blocks/player_pos
+        # Click to hide toolbox and change exisitng block/player_pos properties
+        # Duplicate blocks
+            # Flip vertically/horizontally
+        # Mirror entire map
+        # Color tool
+        # Rearrange block hierarchy somehow
+        # Change map properties, probably by going to new_level without actually making a new level
+
+# Add player pushing
+
+# Future TODOs
+# Add in control indication in add_player and maybe also in settings menu
+# Add boosts:
+#       extra jump strength
+#       speed
+#       shifting through the floor
+#       tag to kill
+#       invincibility
+# Add special players:
+#       Sonic Blue for speed boost
+#       Mario Red or Luigi Green for jump boost
+#       Pac Man Yellow for new controls that simply move around the map but maybe can't go diagonally
+#       Link Green for something? Maybe an arrow
+#       Ness Yellow for PK fire ability
+#       Peach Pink for slow falling
+#       Game and Watch Black for pixely movement
+#       Duck Hunt Orange for jumping in the air
+# Teams mode
+# Player count for default multiple players
+# Maybe add sound effects
+# Add a toggle window mode
+# Add something for single player

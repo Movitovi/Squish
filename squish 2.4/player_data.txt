@@ -1,0 +1,25 @@
+player
+    name = Link
+    base_color = 0x008800
+    kills = 3
+    wins = 3
+    left = [1, 'axis', 0, -1]
+    right = [1, 'axis', 0, 1]
+    up = [1, 'axis', 1, -1]
+    down = [1, 'axis', 1, 1]
+    jump = [1, 'button', 0, 1]
+    shield = [1, 'axis', 5, 1]
+    ability = [1, 'axis', 4, 1]
+
+player
+    name = Pac Man
+    base_color = 0xffff00
+    kills = 2
+    wins = 2
+    left = [-1, 1073741904]
+    right = [-1, 1073741903]
+    up = [-1, 1073741906]
+    down = [-1, 1073741905]
+    jump = [-1, 1073741906]
+    shield = [-1, 1073742049]
+    ability = [-1, 32]

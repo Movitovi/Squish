@@ -1,0 +1,86 @@
+level
+    size = [1920, 1080]
+    background_color = 0xf7f7f7
+    player_size = [60.0, 60.0]
+    player_gravity = 2.0
+    player_jump_strength = 90.0
+    player_vel_terminal = [10.0, 20.0]
+    player_vel_delta = [1.2, 1.4]
+    vertical_looping = true
+    horizontal_looping = true
+    side_wall_depth = 80.0
+    player_shield_health_base = 70.0
+    player_shield_regen = 1.0
+
+player_pos = [1007.0, 311.0]
+player_pos = [221.0, 496.0]
+player_pos = [1754.0, 253.0]
+player_pos = [1749.0, 587.0]
+player_pos = [90.0, 136.0]
+player_pos = [998.0, 624.0]
+
+block
+    size = [1919.0, 46.0]
+    pos = [0.0, 1033.0]
+    color = 0x000000
+    solid = true
+
+block
+    size = [19.0, 6.0]
+    pos = [1900.0, 1058.0]
+    color = 0x000000
+    solid = true
+
+block
+    size = [53.0, 1079.0]
+    pos = [1866.0, 0.0]
+    color = 0x000000
+    solid = true
+
+block
+    size = [50.0, 1072.0]
+    pos = [0.0, 7.0]
+    color = 0x000000
+    solid = true
+
+block
+    size = [1919.0, 53.0]
+    pos = [0.0, 0.0]
+    color = 0x000000
+    solid = true
+
+block
+    size = [266.0, 52.0]
+    pos = [1616.0, 367.0]
+    color = 0x000000
+    solid = true
+
+block
+    size = [201.0, 71.0]
+    pos = [0.0, 234.0]
+    color = 0x000000
+    solid = true
+
+block
+    size = [285.0, 80.0]
+    pos = [46.0, 592.0]
+    color = 0x000000
+    solid = true
+
+block
+    size = [170.0, 63.0]
+    pos = [1712.0, 703.0]
+    color = 0x000000
+    solid = true
+
+block
+    size = [187.0, 126.0]
+    pos = [881.0, 390.0]
+    color = 0x000000
+    solid = true
+
+block
+    size = [182.0, 127.0]
+    pos = [892.0, 742.0]
+    color = 0x000000
+    solid = true

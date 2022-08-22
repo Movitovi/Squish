@@ -1,0 +1,123 @@
+                # Player collision starts here
+                #for ii in range(0, len(self.players)):
+                #    if i != ii and self.players[ii].alive:
+                #        plajer.player_collision(self.players[ii], lvl)
+                #for ii in range(0, len(self.players)):
+                #    if i != ii and self.players[ii].alive:
+                #        plajer.player_vertical_collision(self.players[ii], lvl)
+
+        # NOTE: this is not a valid form of pushing because it can't tell who is the one pushing
+        for i in range(0, len(self.players)):
+            plajer = self.players[i]
+            if plajer.alive:
+                for ii in range(0, len(self.players)):
+                    plaier = self.players[ii]
+                    if plaier.alive and (i != ii):
+                        overlap = rect_overlap(plajer.pos, plajer.size, plajer.vel, plaier.lpos, plaier.size)
+                        if overlap != [0, 0] and (abs(overlap[0]) <= abs(overlap[1])):
+                            if overlap[0] > overlap[1]:
+                                plajer.vel_external.append(overlap)
+                            #plaier.vel_external += 
+                            #i = abs(vector[0]) > abs(vector[1])
+                            #vel_adjustment[i] += vector[i]
+                            #adjustment_count[i] += 1
+        
+        # This is causing the pushed player to jump when they start falling off an edge
+        for i in range(0, len(self.players)):
+            plajer = self.players[i]
+            if plajer.alive:
+                for ii in range(0, len(self.players)):
+                    if i != ii and self.players[ii].alive:
+                        plajer.player_collision(self.players[ii], lvl)
+        
+        self.evel_terminal = 0
+        self.evel_desired = 0
+        self.evel_delta = 0
+        self.evel = 0
+        for i in range(0, len(self.players)):
+            plajer = self.players[i]
+            if plajer.alive:
+                for ii in range(0, len(self.players)):
+                    plaier = self.players[ii]
+                    if plaier.alive and (i != ii):
+                        # Give external velocities based on other's old positions but own new position
+                        overlap = rect_overlap(plajer.pos, plajer.size, plajer.vel, plaier.lpos, plaier.size)
+                        if overlap != [0, 0]:
+                            #overlap[0] = plaier.controls['right'][-1] - plaier.controls['left'][-1]
+                            plaier.vel_external.append(overlap)
+                        #plajer.player_collision(self.players, lvl, [i, ii])
+
+        # Check for collision into last positions. If so check collision into new positions
+        # Do not collide if new positions do not collide
+        # Stop at touching the other player. Move the rest of the velocity due unless that
+        # exceeds the terminal push velocity. Then next tick keep the same pushing velocity but
+        # don't exceed terminal. If not at terminal yet slowly add to the speed.
+        
+        # Somehow simulate forces by accounting for other player's velocities and inputs
+        # If pushing against each other maintain present velocity bu
+
+
+        # Set new desired velocity once collided and act accordingly
+        
+        
+        
+        for i in range(0, len(self.players)):
+            plajer = self.players[i]
+            if plajer.alive:
+                vel_adjustment = [0, 0]
+                adjustment_count = [0, 0]
+                for vector in plajer.vel_external:
+                    i = abs(vector[0]) > abs(vector[1])
+                    vel_adjustment[i] += vector[i]
+                    adjustment_count[i] += 1
+                if adjustment_count[0]:
+                    #total_vel_external[0] = -1 * (vel_adjustment[0]) * plajer.vel_terminal[0] * self.player_push_constant
+                    plajer.evel_desired = plajer.vel_terminal[0] * self.player_push_constant
+                
+                if plajer.evel < plajer.evel_desired:
+                    plajer.evel += plajer.evel_delta
+                    if plajer.evel > plajer.evel_desired:
+                        plajer.evel = plajer.evel_desired
+                elif plajer.evel > plajer.evel_desired:
+                    plajer.evel -= plajer.evel_delta
+                    if plajer.evel < plajer.evel_desired:
+                        plajer.evel = plajer.evel_desired
+                
+
+                new_point = [plajer.pos[0] + plajer.evel, plajer.pos[1]]
+                result = find_wrapped_point(new_point, plajer.size, lvl)
+                plajer.pos = result[0]
+                plajer.update_vel(lvl)
+
+                for block in lvl.blocks:
+                    plajer.block_collision(block, lvl)
+        
+        # Maybe assume there are no blocks between present position and last position
+        for i in range(0, len(self.players)):
+            plajer = self.players[i]
+            if plajer.alive:
+                vel_adjustment = [0, 0]
+                adjustment_count = [0, 0]
+                for vector in plajer.vel_external:
+                    i = abs(vector[0]) > abs(vector[1])
+                    vel_adjustment[i] += vector[i]
+                    adjustment_count[i] += 1
+                total_vel_external = [0, 0]
+                # Make pushing players a constant speed
+                # Maybe keep the inability to push back
+                #if adjustment_count[0] and not plajer.on_player:
+                #    total_vel_external[0] = -1 * (vel_adjustment[0]) / adjustment_count[0]
+                #    if total_vel_external[0] > plajer.vel_terminal[0] * self.player_push_constant:
+                #        total_vel_external[0] = plajer.vel_terminal[0] * self.player_push_constant
+                if adjustment_count[0]:
+                    total_vel_external[0] = -1 * (vel_adjustment[0]) * plajer.vel_terminal[0] * self.player_push_constant
+                if adjustment_count[1]:
+                    total_vel_external[1] = -1 * vel_adjustment[1] / adjustment_count[1]
+                
+                new_point = [plajer.pos[0] + total_vel_external[0], plajer.pos[1] + total_vel_external[1]]
+                result = find_wrapped_point(new_point, plajer.size, lvl)
+                plajer.pos = result[0]
+                plajer.update_vel(lvl)
+
+                for block in lvl.blocks:
+                    plajer.block_collision(block, lvl)

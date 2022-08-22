@@ -1,0 +1,97 @@
+# Adjust the player weights
+
+# Target Player
+#   When player doesn't pose a great threat
+# Target boost
+#   When boost is close
+# Flee Player
+#   When player poses a threat
+# Random Position
+#   Just pick a random position closer to the top of the map on abyss levels
+
+# Avoid Abyss # This one should only be temporary and not remove an existing target
+#   When above the void and vertical velocity is not high in the up direction
+#   If so the run towards the nearest block
+
+# Pick one of these targets and maintain for a while
+#   Don't pick the same target if recently failed to target
+
+# Jump when about to fall
+#   That's walking off a block into the void
+#   Falling down on the side of a wall into the void
+
+# Lambda doesn't work with cpus
+# Cpus keep falling into the void
+
+# Maybe artificially increase attack rates
+# Needs more randomness in target choice
+
+
+
+
+
+
+# Test simultaneous deaths
+# Test levels with no blocks
+
+# The slider can be selected on page entrance
+
+
+
+
+
+# If there are many players then the cpu is far too unlikely to choose the non player targets
+# Add ability to use abilities
+# Don't target teammates
+
+# Reasons are weighted by their distance to the cpu
+# reasons to run weights are heavier
+
+# Reasons to run (targets)
+#       Unless cpu has kill or invincibility boost with enough health
+#           Close player with kill boosts
+#           Close player above in position to squish the cpu
+#       Might fall in the void
+
+# Reasons to pursue (targets)
+#       Player to kill
+#       Boost to grab
+#       Random spot sometimes when failing too much
+
+# Use phasing to pursue or run when appropriate
+
+# Look for nearest player that hasn't failed to target recently
+#       Chance to pick a random spot to go to
+#       Chance to pick boosts, favor close boosts
+# Head that direction
+# Jump walls and holes
+# Run from players that have kill ability or are about to squish from above
+# Jump or push against a player squishing cpu
+# Don't push against if being squish by players on both sides
+# Get boosts if nearby
+
+# Add computers
+#       Add cpu option in add player page
+#       Follow the nearest player horizontally
+#       If that player is above self try to jump
+#       If at an edge jump
+#       If a wall is in the way try to go above or below it if that is safe
+#       Don't fall into death
+#       Maybe track a player for a while
+#       Use randomness within the AI
+#       Shield when about to die or to stop vertical momentum
+#       Maybe add some sort of path finding
+#       Tron cpu support
+#       Make cpu ghosts have different AIs that simply wander
+
+
+
+
+# Make more levels
+# Upgrade sound
+# Go through and remove potentials for mod by zero (specifically the level size being 0)
+# Comment the code
+# Maybe comment the pages
+# Need to organize github
+# Make more levels
+# Maybe make a user manual

@@ -1,0 +1,64 @@
+player
+    name = Player 1
+    base_color = 0x00cc00
+    kills = 0
+    wins = 0
+    left = [1, 'axis', 0, -1]
+    right = [1, 'axis', 0, 1]
+    up = [1, 'axis', 1, -1]
+    down = [1, 'axis', 1, 1]
+    jump = [1, 'button', 0, 1]
+    shield = [1, 'axis', 5, 1]
+    ability = [1, 'axis', 4, 1]
+
+player
+    name = Player 2
+    base_color = 0xe600e6
+    kills = 0
+    wins = 0
+    left = [0, 'axis', 0, -1]
+    right = [0, 'axis', 0, 1]
+    up = [0, 'axis', 1, -1]
+    down = [0, 'axis', 1, 1]
+    jump = [0, 'button', 0, 1]
+    shield = [0, 'axis', 5, 1]
+    ability = [0, 'axis', 4, 1]
+
+player
+    name = Player 3
+    base_color = 0x0000ff
+    kills = 0
+    wins = 0
+    left = [2, 'axis', 0, -1]
+    right = [2, 'axis', 0, 1]
+    up = [2, 'axis', 1, -1]
+    down = [2, 'axis', 1, 1]
+    jump = [2, 'button', 0, 1]
+    shield = [2, 'axis', 5, 1]
+    ability = [2, 'axis', 4, 1]
+
+player
+    name = Player 4
+    base_color = 0xff99cc
+    kills = 0
+    wins = 0
+    left = [3, 'axis', 0, -1]
+    right = [3, 'axis', 0, 1]
+    up = [3, 'axis', 1, -1]
+    down = [3, 'axis', 1, 1]
+    jump = [3, 'button', 0, 1]
+    shield = [3, 'axis', 5, 1]
+    ability = [3, 'axis', 4, 1]
+
+player
+    name = Player 5
+    base_color = 0x33cccc
+    kills = 0
+    wins = 0
+    left = [4, 'axis', 0, -1]
+    right = [4, 'axis', 0, 1]
+    up = [4, 'axis', 1, -1]
+    down = [4, 'axis', 1, 1]
+    jump = [4, 'button', 0, 1]
+    shield = [4, 'axis', 5, 1]
+    ability = [4, 'axis', 4, 1]
