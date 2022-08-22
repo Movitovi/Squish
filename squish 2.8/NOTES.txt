@@ -1,3 +1,2 @@
-# Add tron cpus
 # Remove potentials for mod by zero (specifically the level size being 0)
 # Make more levels

@@ -204,7 +204,7 @@ block
 
 block
     size = [x0.2, x0.07]
-    pos = [cx0.14, cx0.27]
+    pos = [cx0.14, cx0.3]
     text = 'Right'
     text_variable = control_right
     text_bold = true

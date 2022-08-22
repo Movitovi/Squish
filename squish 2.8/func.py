@@ -1202,8 +1202,7 @@ class game():
 
     def get_player_inputs(self):
         key = pygame.key.get_pressed()
-        for i in range(0, len(self.players)):
-            plajer = self.players[i]
+        for i, plajer in enumerate(self.players):
             if not plajer.is_cpu:
                 for control_key in plajer.controls:
                     plajer.controls[control_key][-2] = plajer.controls[control_key][-1]
@@ -1227,13 +1226,13 @@ class game():
                                     plajer.controls[control_key][-1] = (self.joysticks[control[0]].get_hat(control[2]) == control[3])
             elif self.mode == 'squish':
                 self.get_cpu_inputs(i)
-            elif self.mode == 'tron':
-                self.tron_game.get_tron_cpu_inputs(self.players, i)
             if self.mode == 'squish':
                 if plajer.controls['up'][-1]:
                     plajer.controls['jump'][-1] = 1
                 elif plajer.controls['jump'][-1]:
                     plajer.controls['up'][-1] = 1
+        if self.mode == 'tron':
+            self.tron_game.get_tron_cpu_inputs()
 
     def set_cpu_weights(self):
         self.void_detect_width = 0.01
@@ -5823,6 +5822,13 @@ class tron_game():
         self.size_trail = [0.4 * self.size_player[0], 0.5 * self.size_player[0]]
         self.size_arena = [self.size[0] - 2 * self.size_player[0], self.size[1] - 2 * self.size_player[1]]
 
+        self.cpu_din_noise = 2
+        self.cpu_move_pile = 10
+        self.cpu_sight = 1.5
+        self.cpu_wall_sight = 2.5
+        self.cpu_xbound = [self.cpu_wall_sight * self.size_player[0], self.size[0] - self.cpu_wall_sight * self.size_player[0]]
+        self.cpu_ybound = [self.cpu_wall_sight * self.size_player[1], self.size[1] - self.cpu_wall_sight * self.size_player[1]]
+
         self.color_background = 0x585858
         self.color_walls = 0x000000
         self.colorkey = 0x010101
@@ -5908,7 +5914,7 @@ class tron_game():
                             next_pos[0] = w1
                         next_din = 270
                 step_remaining = next_step
-        self.dont_kill = 8
+        self.dont_kill = 25
         self.death_animations = []
         self.dead_trails = []
         self.winner = None
@@ -5919,19 +5925,95 @@ class tron_game():
             if random.randint(0, 5) == 0:
                 self.sound.music['noisy'].play()
 
-    def get_tron_cpu_inputs(self, players, i):
-        plajer = players[i]
-        for control_key in plajer.controls:
-            plajer.controls[control_key][-2] = plajer.controls[control_key][-1]
-            plajer.controls[control_key][-1] = 0
-        
-        # TODO
-        # Look at walls and other players and turn away from them
-        # If close to the wall turn in the best direction
-        # Account for multiple walls
-        # Consider the trail of a player as a wall
-        # Avoid collision with a player
-        ['left', 'right', 'up', 'down']
+    def get_tron_cpu_inputs(self):
+        for i, plajer in enumerate(self.players):
+            if plajer.player.is_cpu:
+                for control_key in ['left', 'right', 'up', 'down']:
+                    plajer.player.controls[control_key][-2] = plajer.player.controls[control_key][-1]
+                    plajer.player.controls[control_key][-1] = 0
+                
+                desired_din = []
+                # Look at the walls
+                if plajer.pos[0] < self.cpu_xbound[0]:
+                    if plajer.pos[1] < self.cpu_ybound[0]:
+                        desired_din.append(45)
+                    elif plajer.pos[1] > self.cpu_ybound[1]:
+                        desired_din.append(315)
+                    else:
+                        desired_din.append(0)
+                elif plajer.pos[0] > self.cpu_xbound[1]:
+                    if plajer.pos[1] < self.cpu_ybound[0]:
+                        desired_din.append(135)
+                    elif plajer.pos[1] > self.cpu_ybound[1]:
+                        desired_din.append(225)
+                    else:
+                        desired_din.append(180)
+                elif plajer.pos[1] < self.cpu_ybound[0]:
+                    desired_din.append(90)
+                elif plajer.pos[1] > self.cpu_ybound[1]:
+                    desired_din.append(270)
+
+                # Look at the cpu's future position
+                future_pos = [0, 0]
+                future_pos[0] = plajer.pos[0] + self.cpu_sight * plajer.size[0] * math.cos(plajer.din * math.pi / 180)
+                future_pos[1] = plajer.pos[1] + self.cpu_sight * plajer.size[1] * math.sin(plajer.din * math.pi / 180)
+
+                # Look at the players and their trails
+                for ii, plaier in enumerate(self.players):
+                    if plaier.alive:
+                        if i != ii:
+                            if distance(future_pos, plaier.pos) < 2 * self.size_player[0]:
+                                # Collided with another player
+                                dx = plaier.pos[0] - plajer.pos[0]
+                                dy = plaier.pos[1] - plajer.pos[1]
+                                desired_din.append((math.atan2(-dy, -dx) * 180 / math.pi) % 360)
+                                continue
+                        
+                        for iii in range(0, len(plaier.trail)):
+                            trail = plaier.trail[iii]
+                            if trail != None:
+                                if (plaier.trail_index - 1 - iii) % len(plaier.trail) > 3:
+                                    if distance(future_pos, trail[0]) < 1.25 * (self.size_trail[1] + self.size_player[0]):
+                                        # Collided with trail
+                                        dx = trail[0][0] - plajer.pos[0]
+                                        dy = trail[0][1] - plajer.pos[1]
+                                        desired_din.append((math.atan2(-dy, -dx) * 180 / math.pi) % 360)
+                                        break
+
+                # If there is any desired_dir head in the average of all desired directions
+                if not self.dont_kill:
+                    if (random.randint(1, self.cpu_move_pile) == 1):
+                        desired_din.append((plajer.din + 4 * (random.random() - 0.5) * self.cpu_din_noise) % 360)
+                    for i in range(0, len(desired_din)):
+                        desired_din[i] = (desired_din[i] + (random.random() - 0.5) * self.cpu_din_noise) % 360
+                if len(desired_din):
+                    if plajer.ldesired_din != None:
+                        if abs((plajer.din - plajer.ldesired_din) % 360) > 25:
+                            desired_din.append(plajer.ldesired_din)
+                        else:
+                            plajer.ldesired_din = None
+                    new_din = average_angle(desired_din)
+                    if new_din == 0:
+                        plajer.player.controls['right'][-1] = 1
+                    elif new_din < 90:
+                        plajer.player.controls['right'][-1] = 1
+                        plajer.player.controls['down'][-1] = 1
+                    elif new_din == 90:
+                        plajer.player.controls['down'][-1] = 1
+                    elif new_din < 180:
+                        plajer.player.controls['down'][-1] = 1
+                        plajer.player.controls['left'][-1] = 1
+                    elif new_din == 180:
+                        plajer.player.controls['left'][-1] = 1
+                    elif new_din < 270:
+                        plajer.player.controls['left'][-1] = 1
+                        plajer.player.controls['up'][-1] = 1
+                    elif new_din == 270:
+                        plajer.player.controls['up'][-1] = 1
+                    else:
+                        plajer.player.controls['up'][-1] = 1
+                        plajer.player.controls['right'][-1] = 1
+                    plajer.ldesired_din = average_angle([plajer.din, new_din, new_din, new_din])
 
     def run(self):
         for plajer in self.players:
@@ -6097,6 +6179,7 @@ class tron_player():
         self.pos = self.opos[:]
         self.lpos = self.opos[:]
         self.din = self.odin
+        self.ldesired_din = None
         self.speed = self.ospeed
         self.length = self.olength
         self.trail = self.length * [None]
@@ -6554,3 +6637,11 @@ def unbiased_smallest(input_list):
                 smallest.append(i)
         return smallest[random.randint(0, len(smallest) - 1)]
     return None
+
+def average_angle(input_list):
+    x_total = 0
+    y_total = 0
+    for angle in input_list:
+        x_total += math.cos(angle * math.pi / 180)
+        y_total += math.sin(angle * math.pi / 180)
+    return (math.atan2(y_total, x_total) * 180 / math.pi) % 360

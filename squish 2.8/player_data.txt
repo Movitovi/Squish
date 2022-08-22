@@ -1,24 +1,24 @@
 player
-    name = Player 1
-    base_color = 0xff0000
-    kills = 2
-    wins = 1
-    team = 2
-    is_cpu = false
-    left = [-1, 1073741904]
-    right = [-1, 1073741903]
-    up = [-1, 1073741906]
-    down = [-1, 1073741905]
-    jump = [-1, 1073741906]
-    shield = [-1, 1073742049]
-    ability = [-1, 32]
+    name = Green
+    base_color = 0x00cc00
+    kills = 38
+    wins = 47
+    team = 0
+    is_cpu = true
+    left = [1, 'axis', 0, -1]
+    right = [1, 'axis', 0, 1]
+    up = [1, 'axis', 1, -1]
+    down = [1, 'axis', 1, 1]
+    jump = [1, 'button', 0, 1]
+    shield = [1, 'axis', 5, 1]
+    ability = [1, 'axis', 4, 1]
 
 player
     name = Player 2
-    base_color = 0x00cc00
-    kills = 0
-    wins = 0
-    team = 2
+    base_color = 0xff0000
+    kills = 1
+    wins = 3
+    team = 0
     is_cpu = true
     left = [0, 'axis', 0, -1]
     right = [0, 'axis', 0, 1]
@@ -30,25 +30,10 @@ player
 
 player
     name = Player 3
-    base_color = 0x0000ff
-    kills = 1
-    wins = 0
-    team = 1
-    is_cpu = true
-    left = [1, 'axis', 0, -1]
-    right = [1, 'axis', 0, 1]
-    up = [1, 'axis', 1, -1]
-    down = [1, 'axis', 1, 1]
-    jump = [1, 'button', 0, 1]
-    shield = [1, 'axis', 5, 1]
-    ability = [1, 'axis', 4, 1]
-
-player
-    name = Player 4
-    base_color = 0xe600e6
-    kills = 7
-    wins = 2
-    team = 4
+    base_color = 0xff99cc
+    kills = 13
+    wins = 9
+    team = 0
     is_cpu = true
     left = [2, 'axis', 0, -1]
     right = [2, 'axis', 0, 1]
@@ -59,11 +44,11 @@ player
     ability = [2, 'axis', 4, 1]
 
 player
-    name = Player 5
-    base_color = 0xffff00
-    kills = 4
-    wins = 1
-    team = 4
+    name = Player 4
+    base_color = 0xe600e6
+    kills = 3
+    wins = 0
+    team = 0
     is_cpu = true
     left = [3, 'axis', 0, -1]
     right = [3, 'axis', 0, 1]
@@ -74,11 +59,11 @@ player
     ability = [3, 'axis', 4, 1]
 
 player
-    name = Player 6
-    base_color = 0xff99cc
-    kills = 2
-    wins = 0
-    team = 3
+    name = Player 5
+    base_color = 0xff9900
+    kills = 0
+    wins = 1
+    team = 0
     is_cpu = true
     left = [4, 'axis', 0, -1]
     right = [4, 'axis', 0, 1]
@@ -87,3 +72,33 @@ player
     jump = [4, 'button', 0, 1]
     shield = [4, 'axis', 5, 1]
     ability = [4, 'axis', 4, 1]
+
+player
+    name = Player 6
+    base_color = 0x99ff33
+    kills = 10
+    wins = 3
+    team = 0
+    is_cpu = true
+    left = [5, 'axis', 0, -1]
+    right = [5, 'axis', 0, 1]
+    up = [5, 'axis', 1, -1]
+    down = [5, 'axis', 1, 1]
+    jump = [5, 'button', 0, 1]
+    shield = [5, 'axis', 5, 1]
+    ability = [5, 'axis', 4, 1]
+
+player
+    name = Player 7
+    base_color = 0x33cccc
+    kills = 2
+    wins = 0
+    team = 0
+    is_cpu = true
+    left = [6, 'axis', 0, -1]
+    right = [6, 'axis', 0, 1]
+    up = [6, 'axis', 1, -1]
+    down = [6, 'axis', 1, 1]
+    jump = [6, 'button', 0, 1]
+    shield = [6, 'axis', 5, 1]
+    ability = [6, 'axis', 4, 1]
