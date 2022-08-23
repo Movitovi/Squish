@@ -1,4 +1,4 @@
-import pygame, os, time, random, math
+import os, pygame, time, random, math
 
 class game():
     def __init__(self):
