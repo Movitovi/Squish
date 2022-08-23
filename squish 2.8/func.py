@@ -37,6 +37,7 @@ class game():
         # Page stuff
         self.page = 'main'
         self.next_page = 'main'
+        self.dont_move_page = 0
         self.page_pause = 35
         self.page_cnt = 0
         self.mouse_multiplier = [1, 1]
@@ -100,6 +101,8 @@ class game():
         if self.real_display_size[1] == 0:
             self.real_display_size[1] = 1
         self.resolutions = [[480, 320], [800, 460], [1280, 720], [1920, 1080]]
+        self.resolution[0] += (self.resolution[0] == 0)
+        self.resolution[1] += (self.resolution[1] == 0)
         self.display_size = self.resolution
         self.font_multiplier = 0.5 * (self.resolution[0] / 1920 + self.resolution[1] / 1080)
         self.initial_size = self.display_size
@@ -1014,7 +1017,7 @@ class game():
                         self.su_rects.append([slider.pos, slider.size])
                         self.slider_latch = 1
                         if slider.slider_size[0] != 0:
-                            slider.percent = (self.mouse_pos[0] - slider.slider_pos[0]) / slider.slider_size[0]
+                            slider.percent = (self.mouse_pos[0] - slider.slider_pos[0]) / (slider.slider_size[0] + (slider.slider_size[0] == 0))
                             value = round(slider.min_value + slider.percent * (slider.max_value - slider.min_value))
                             for action in slider.actions:
                                 if action[0] == 'set':
@@ -1107,7 +1110,10 @@ class game():
         self.levels = {}
         for lv in os.listdir(self.level_directory):
             file = open(os.path.join(self.level_directory, lv), encoding = 'utf-8')
-            self.levels[lv.replace('.txt', '')] = level(file.readlines(), lv.replace('.txt', ''))
+            try:
+                self.levels[lv.replace('.txt', '')] = level(file.readlines(), lv.replace('.txt', ''))
+            except:
+                print('ERROR: Could not load level ' + lv)
             file.close()
         self.level = ''
 
@@ -1378,7 +1384,7 @@ class game():
                     abv = above / lvl.size[1]
                     if abv != 0:
                         weight += self.pursue_player_weights['above'] / abv
-                    weight /= self.pursue_player_weights['scale']
+                    weight /= (self.pursue_player_weights['scale'] + 0.01 * (self.pursue_player_weights['scale'] == 0))
                     weight /= (plajer.enemy_count + 0.01 * (plajer.enemy_count == 0))
                     potential_targets.append(target(plajer, weight, 'player', 1, plaier, lvl))
             
@@ -1488,7 +1494,7 @@ class game():
                                             shift = p1[0] - 0.5 * lvl.size[0]
                                             c[0] = (c[0] - shift) % lvl.size[0] + shift
                                         # Test if the corner is reachable
-                                        if c[1] >= abs(c[0] - p1[0]) - (0.37 * (c[0] - p1[0]) * (plajer.vel[0] / plajer.vel_terminal[0])) + p1[1]:
+                                        if c[1] >= abs(c[0] - p1[0]) - (0.37 * (c[0] - p1[0]) * (plajer.vel[0] / (plajer.vel_terminal[0] + (plajer.vel_terminal[0] == 0)))) + p1[1]:
                                             rs.append(distance(p1, c, lvl))
                                             pa = [c[0], c[1] - block.size[1] - 0.5 * plajer.size[1]]
                                             ps.append(pa)
@@ -1905,7 +1911,7 @@ class game():
                 if plajer.alive and (plajer.pos[1] >= lvl.size[1]):
                     plajer.alive = 0
                 if plajer.pos[1] >= lvl.size[1] + 6 * plajer.base_size[1]:
-                    plajer.vel[1] = -1.67 * lvl.player_gravity * lvl.player_jump_strength / plajer.jump_strength
+                    plajer.vel[1] = -1.67 * lvl.player_gravity * lvl.player_jump_strength / (plajer.jump_strength + (plajer.jump_strength == 0))
                     plajer.bouncing = 30
                 if plajer.pos[1] < -plajer.base_size[1]:
                     plajer.pos[1] = -plajer.base_size[1]
@@ -2240,7 +2246,11 @@ class game():
                                 has_key = 1
                                 break
                         if not has_key:
-                            self.levels[key] = level(default_level, key)
+                            try:
+                                self.levels[key] = level(default_level, key)
+                            except:
+                                self.dont_move_page = 1
+                                print('ERROR: No good default_level.txt found.')
                             break
                         key = key + '-'
                     self.level = key
@@ -2268,7 +2278,6 @@ class game():
                         if action[3] == 'color':
                             self.edited_background = int(action[4], 16)
             elif action[0] == 'input':
-                # HERE 1
                 if action[1] == 'level':
                     if action[2] == 'name':
                         self.text_input = self.levels[self.level].name
@@ -3328,7 +3337,11 @@ class game():
         self.su_rects = []
         self.su_all = self.menu_controls['page_entrance']
 
-        self.page = self.next_page
+        if self.dont_move_page <= 0:
+            self.page = self.next_page
+        else:
+            self.next_page = self.page
+            self.dont_move_page -= 1
         self.clock.tick(self.tick_speed)
 
     def close(self):
@@ -4249,7 +4262,7 @@ class player():
                 if self.base_size[0] != 0:
                     if self.size[0] > self.base_size[0]:
                         self.size[0] = self.base_size[0]
-                    self.squish_width = self.size[0] / self.base_size[0]
+                    self.squish_width = self.size[0] / (self.base_size[0] + (self.base_size[0] == 0))
                 else:
                     self.squish_width = 0
                 if self.squish_width > 1:
@@ -4338,7 +4351,7 @@ class player():
                 if self.base_size[0] != 0:
                     if self.size[0] > self.base_size[0]:
                         self.size[0] = self.base_size[0]
-                    self.squish_width = self.size[0] / self.base_size[0]
+                    self.squish_width = self.size[0] / (self.base_size[0] + (self.base_size[0] == 0))
                 else:
                     self.squish_width = 0
                 if self.squish_width > 1:
@@ -4486,12 +4499,12 @@ class player():
                 else:
                     self.gaw_counter[i] = 0
                 if self.gaw_counter[i] >= 5:
-                    self.gaw_adjustment[i] = self.pos[i] % (m * self.base_size[i])
+                    self.gaw_adjustment[i] = self.pos[i] % (m * (self.base_size[i] + (self.base_size[i] == 0)))
             self.gaw_lpos = self.pos[:]
             if self.base_size[0] != 0:
-                self.pos[0] = m * self.base_size[0] * (self.pos[0] // (m * self.base_size[0])) + self.gaw_adjustment[0]
+                self.pos[0] = m * self.base_size[0] * (self.pos[0] // (m * (self.base_size[0] + (self.base_size[0] == 0)))) + self.gaw_adjustment[0]
             if self.base_size[1] != 0:
-                self.pos[1] = m * self.base_size[1] * (self.pos[1] // (m * self.base_size[1])) + self.gaw_adjustment[1]
+                self.pos[1] = m * self.base_size[1] * (self.pos[1] // (m * (self.base_size[1] + (self.base_size[1] == 0)))) + self.gaw_adjustment[1]
             self.gaw_llpos = self.pos[:]
         if not self.alive:
             # This is for ghosts
@@ -4653,7 +4666,7 @@ class level():
     def __init__(self, file, name):
         self.file = file
         self.name = name
-        self.size = [0, 0]
+        self.size = [1, 1]
         self.background_color = 0
         self.player_size = [0, 0]
         self.player_gravity = 0
@@ -4696,6 +4709,10 @@ class level():
                 if properky == 'size':
                     size = findxy(value)
                     self.size = [int(size[0]), int(size[1])]
+                    if self.size[0] <= 0:
+                        self.size[0] = 0
+                    if self.size[1] <= 0:
+                        self.size[1] = 0
                     self.rescale()
                 elif properky == 'background_color':
                     self.background_color = int(value, 16)
@@ -4944,9 +4961,9 @@ class death_animation():
     def __init__(self, pos, size, life = 10, colors = [0xffffff, 0x000000, 0x000000]):
         self.pos = pos[:]
         self.size = size[:]
-        self.life = life
+        self.life = life + (life == 0)
         self.colors = colors
-        self.color_count = len(self.colors)
+        self.color_count = len(self.colors) + (len(self.colors) == 0)
         self.color = self.colors[self.life % self.color_count]
 
         self.orects = [[pos[:], [0, 0]], [pos[:], [0, 0]], [pos[:], [0, 0]], [pos[:], [0, 0]]]
@@ -6388,6 +6405,7 @@ def find_wrapped_point(point, size, lvl, i = -1):
 def compare_wrapped(p1, s1, p2, s2, lvl, i, inclusive = 0, precision = 10000000):
     # This figures out if there is an overlap of two rectangles in the i direction
     # The precision is needed to minimize floating point errors
+    precision += (precision == 0)
     if inclusive:
         if round(precision * (p1[i] + s1[i])) / precision >= round(precision * p2[i]) / precision:
             if round(precision * (p2[i] + s2[i])) / precision >= round(precision * p1[i]) / precision:
