@@ -1,0 +1,116 @@
+level
+    size = [1920, 1080]
+    background_color = 0xbbbbbb
+    player_size = [60.0, 60.0]
+    player_gravity = 30.0
+    player_jump_strength = 32.0
+    player_vel_terminal = [6.0, 23.0]
+    player_vel_delta = [1.2, 1.4]
+    vertical_looping = true
+    horizontal_looping = true
+    side_wall_depth = 80.0
+    player_shield_health_base = 70.0
+    player_shield_regen = 1.0
+
+player_pos = [390, 624]
+player_pos = [976, 829]
+player_pos = [1688, 596]
+player_pos = [1583, 223]
+player_pos = [1142, 100]
+player_pos = [845, 337]
+player_pos = [611, 37]
+player_pos = [188, 49]
+player_pos = [1213, 639]
+player_pos = [648, 686]
+player_pos = [1512, 809]
+player_pos = [-24, 515]
+player_pos = [344, 350]
+player_pos = [765, 686]
+player_pos = [1319, 639]
+player_pos = [278, 624]
+player_pos = [1695, 223]
+player_pos = [91, 49]
+
+block
+    size = [251, 224]
+    pos = [258, 684]
+    color = 0xa010ff
+    solid = true
+
+block
+    size = [224, 217]
+    pos = [744, 397]
+    color = 0xffa010
+    solid = true
+
+block
+    size = [174, 143]
+    pos = [1179, 699]
+    color = 0x990000
+    solid = true
+
+block
+    size = [221, 173]
+    pos = [1514, 283]
+    color = 0x444499
+    solid = true
+
+block
+    size = [207, 177]
+    pos = [78, 109]
+    color = 0x45b39d
+    solid = true
+
+block
+    size = [140, 96]
+    pos = [308, 410]
+    color = 0xf7f7f7
+    solid = true
+
+block
+    size = [98, 120]
+    pos = [0, 575]
+    color = 0xf1c40f
+    solid = true
+
+block
+    size = [129, 140]
+    pos = [1460, 869]
+    color = 0xcd6155
+    solid = true
+
+block
+    size = [160, 156]
+    pos = [1090, 160]
+    color = 0x10a000
+    solid = true
+
+block
+    size = [143, 117]
+    pos = [572, 97]
+    color = 0xbb10a0
+    solid = true
+
+block
+    size = [174, 115]
+    pos = [651, 746]
+    color = 0x10a0ff
+    solid = true
+
+block
+    size = [116, 125]
+    pos = [938, 889]
+    color = 0x888888
+    solid = true
+
+block
+    size = [170, 107]
+    pos = [1608, 0]
+    color = 0x000000
+    solid = true
+
+block
+    size = [137, 122]
+    pos = [1665, 656]
+    color = 0xaf7ac5
+    solid = true

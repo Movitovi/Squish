@@ -1,0 +1,78 @@
+settings
+    take_screenshot
+    page_pause
+
+block
+    size = [x0.48, x0.735]
+    pos = [cx0.5, cx0.5]
+    color = 0x5e3926
+
+block
+    size = [x0.46, x0.7]
+    pos = [cx0.5, cx0.5]
+    color = 0xab6a47
+
+block
+    size = [x0.225, x0.07]
+    pos = [cx0.5, cx0.22]
+    text = 'Score: {}'
+    text_variable = scythe_score
+    text_bold = true
+    text_size = 96
+    text_pos = [cx0.5, cx0.5]
+    text_dynamic_pos = true
+
+button
+    button_pos = [0, 0]
+    size = [x0.13, x0.07]
+    pos = [cx0.353, cx0.4]
+    active_color = 0x7b4d33
+    text = 'Play Again'
+    text_bold = true
+    text_size = 32
+    text_pos = [cx0.5, cx0.5]
+    action = stop_music
+    action = play_scythe
+
+button
+    button_pos = [0, 1]
+    size = [x0.13, x0.07]
+    pos = [cx0.353, cx0.5]
+    active_color = 0x7b4d33
+    text = 'Main Menu'
+    text_bold = true
+    text_size = 32
+    text_pos = [cx0.5, cx0.5]
+    action = stop_music
+    action = goto:main
+
+block
+    size = [x0.28, x0.55]
+    pos = [cx0.575, cx0.56]
+    color = 0x5e3926
+
+block
+    size = [x0.13, x0.07]
+    pos = [cx0.575, cx0.308]
+    text = 'High Score'
+    text_bold = true
+    text_size = 32
+    text_pos = [cx0.5, cx0.5]
+
+list
+    type = scythe_score
+    size = [x0.26, x0.488]
+    pos = [cx0.575, cx0.574]
+    color = 0x5e3926
+    entry_size = [x1, x0.07]
+    entry_spacing = x0.012
+    entry_color = 0x7b4d33
+    text_bold = true
+    text_size = 32
+    rank_pos = [rx0.06, cx0.5]
+    score_pos = [rx0.17, cx0.5]
+
+control
+    trigger = back
+    action = stop_music
+    action = goto:main
