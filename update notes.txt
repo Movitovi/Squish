@@ -107,9 +107,9 @@ Added computers
 	It is really bad at this on levels with many small platforms above the void
 	Having the jump boost makes it less afraid of the void
 
-squish 2.8 (TBD)
+squish 2.8 (24-08-2022)
 	Fixed float values of x coordinate of duplicated things in the level editor when it should be int values
 	Fixed slider being used when pressing the lmb off the slider then moving onto the slider
 	Added Tron cpus. They don't have strategy. They simply avoid dying if they can
 	Removed some potentials for errors. Especially within messing with level txt files
-	Hopefully will add some more levels
+	Added some more levels
