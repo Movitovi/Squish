@@ -1,5 +1,4 @@
-Squish is a multiplayer square brawler. Just download the download.zip file and extract it. Then run squish.exe. There are a few more things I need to add before I'm done. But the present version is fully playable. Or check out a few screenshots in the Screenshots folder if you just want to see what the game looks like.
-                                                 -2022-Aug-22nd
+Squish is a multiplayer square brawler. Just download the download.zip file and extract it. Then run squish.exe. Go to the player setup to set players map controls or add cpus. I have not tried to make a build for anything other than windows. But it may be doable in conjunction with other programs like wine. Please feel free to contact be about any issues or any cool levels you made. I might make a folder for community built levels if there is enough interest. Thanks! -Movitovi
 
 ![Alt text](https://github.com/Movitovi/Squish/blob/main/Screenshots/main_level.PNG?raw=true "Main Level")
 ![Alt text](https://github.com/Movitovi/Squish/blob/main/Screenshots/team_mode.PNG?raw=true "With Teams")
