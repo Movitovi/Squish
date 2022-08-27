@@ -1,7 +1,7 @@
 volume = 50
 fullscreen = true
-resolution = [1920, 1080]
-show_fps = false
+resolution = [1280, 720]
+show_fps = true
 boosts_on = true
 boost_periodicity = 50
 boost_draw_pile = 150

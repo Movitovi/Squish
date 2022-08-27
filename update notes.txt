@@ -113,3 +113,7 @@ squish 2.8 (24-08-2022)
 	Added Tron cpus. They don't have strategy. They simply avoid dying if they can
 	Removed some potentials for errors. Especially within messing with level txt files
 	Added some more levels
+
+squish 2.9 (27-08-2022)
+	Fixed crashing on level editor while controllers connected
+	Added ability to edit a player by clicking on them in the player setup page

@@ -1,0 +1,383 @@
+level
+    size = [1920, 1080]
+    background_color = 0x000000
+    player_size = [60.0, 60.0]
+    player_gravity = 10.0
+    player_jump_strength = 18.0
+    player_vel_terminal = [6.0, 15.0]
+    player_vel_delta = [1.2, 0.5]
+    vertical_looping = true
+    horizontal_looping = true
+    side_wall_depth = 80.0
+    player_shield_health_base = 70.0
+    player_shield_regen = 1.0
+
+player_pos = [294, 218]
+player_pos = [1475, 464]
+player_pos = [484, 527]
+player_pos = [935, 586]
+player_pos = [317, 837]
+player_pos = [930, 837]
+player_pos = [1101, 253]
+player_pos = [1568, 930]
+player_pos = [603, 104]
+
+block
+    size = [242, 45]
+    pos = [175, 292]
+    color = 0xbbbbbb
+    solid = true
+
+block
+    size = [157, 31]
+    pos = [220, 278]
+    color = 0xbbbbbb
+    solid = true
+
+block
+    size = [26, 13]
+    pos = [253, 268]
+    color = 0xbbbbbb
+    solid = true
+
+block
+    size = [87, 27]
+    pos = [305, 327]
+    color = 0xbbbbbb
+    solid = true
+
+block
+    size = [703, 64]
+    pos = [376, 656]
+    color = 0xbbbbbb
+    solid = true
+
+block
+    size = [253, 61]
+    pos = [425, 610]
+    color = 0xbbbbbb
+    solid = true
+
+block
+    size = [240, 20]
+    pos = [804, 646]
+    color = 0xbbbbbb
+    solid = true
+
+block
+    size = [67, 26]
+    pos = [986, 525]
+    color = 0xbbbbbb
+    solid = true
+
+block
+    size = [470, 34]
+    pos = [570, 707]
+    color = 0xbbbbbb
+    solid = true
+
+block
+    size = [103, 35]
+    pos = [463, 587]
+    color = 0xbbbbbb
+    solid = true
+
+block
+    size = [104, 17]
+    pos = [656, 650]
+    color = 0xbbbbbb
+    solid = true
+
+block
+    size = [54, 25]
+    pos = [672, 628]
+    color = 0xbbbbbb
+    solid = true
+
+block
+    size = [45, 28]
+    pos = [407, 703]
+    color = 0xbbbbbb
+    solid = true
+
+block
+    size = [126, 41]
+    pos = [617, 733]
+    color = 0xbbbbbb
+    solid = true
+
+block
+    size = [54, 28]
+    pos = [651, 767]
+    color = 0xbbbbbb
+    solid = true
+
+block
+    size = [67, 65]
+    pos = [1097, 313]
+    color = 0xbbbbbb
+    solid = true
+
+block
+    size = [301, 57]
+    pos = [1383, 536]
+    color = 0xbbbbbb
+    solid = true
+
+block
+    size = [128, 20]
+    pos = [1426, 524]
+    color = 0xbbbbbb
+    solid = true
+
+block
+    size = [55, 16]
+    pos = [1535, 586]
+    color = 0xbbbbbb
+    solid = true
+
+block
+    size = [121, 113]
+    pos = [1277, 740]
+    color = 0xbbbbbb
+    solid = true
+
+block
+    size = [83, 90]
+    pos = [925, 897]
+    color = 0xbbbbbb
+    solid = true
+
+block
+    size = [197, 43]
+    pos = [255, 903]
+    color = 0xbbbbbb
+    solid = true
+
+block
+    size = [126, 26]
+    pos = [558, 164]
+    color = 0xbbbbbb
+    solid = true
+
+block
+    size = [28, 106]
+    pos = [782, 273]
+    color = 0xbbbbbb
+    solid = true
+
+block
+    size = [18, 105]
+    pos = [1590, 120]
+    color = 0xbbbbbb
+    solid = true
+
+block
+    size = [22, 173]
+    pos = [1254, 104]
+    color = 0xbbbbbb
+    solid = true
+
+block
+    size = [231, 23]
+    pos = [1505, 990]
+    color = 0xbbbbbb
+    solid = true
+
+block
+    size = [83, 71]
+    pos = [105, 526]
+    color = 0xbbbbbb
+    solid = true
+
+block
+    size = [166, 15]
+    pos = [264, 897]
+    color = 0xbbbbbb
+    solid = true
+
+block
+    size = [80, 27]
+    pos = [353, 932]
+    color = 0xbbbbbb
+    solid = true
+
+block
+    size = [97, 93]
+    pos = [1384, 767]
+    color = 0xbbbbbb
+    solid = true
+
+block
+    size = [92, 180]
+    pos = [1826, 81]
+    color = 0xffa010
+    solid = false
+
+block
+    size = [14, 12]
+    pos = [104, 73]
+    color = 0xf7f7f7
+    solid = false
+
+block
+    size = [24, 18]
+    pos = [980, 77]
+    color = 0xf7f7f7
+    solid = false
+
+block
+    size = [18, 7]
+    pos = [543, 380]
+    color = 0xf7f7f7
+    solid = false
+
+block
+    size = [26, 16]
+    pos = [356, 511]
+    color = 0xf7f7f7
+    solid = false
+
+block
+    size = [31, 22]
+    pos = [175, 405]
+    color = 0xf7f7f7
+    solid = false
+
+block
+    size = [24, 12]
+    pos = [136, 777]
+    color = 0xf7f7f7
+    solid = false
+
+block
+    size = [7, 10]
+    pos = [532, 818]
+    color = 0xf7f7f7
+    solid = false
+
+block
+    size = [8, 12]
+    pos = [876, 845]
+    color = 0xf7f7f7
+    solid = false
+
+block
+    size = [16, 3]
+    pos = [1248, 786]
+    color = 0xf7f7f7
+    solid = false
+
+block
+    size = [14, 22]
+    pos = [1126, 406]
+    color = 0xf7f7f7
+    solid = false
+
+block
+    size = [13, 21]
+    pos = [958, 426]
+    color = 0xf7f7f7
+    solid = false
+
+block
+    size = [22, 16]
+    pos = [878, 320]
+    color = 0xf7f7f7
+    solid = false
+
+block
+    size = [16, 26]
+    pos = [804, 141]
+    color = 0xf7f7f7
+    solid = false
+
+block
+    size = [16, 17]
+    pos = [512, 34]
+    color = 0xf7f7f7
+    solid = false
+
+block
+    size = [12, 6]
+    pos = [325, 106]
+    color = 0xf7f7f7
+    solid = false
+
+block
+    size = [14, 8]
+    pos = [204, 215]
+    color = 0xf7f7f7
+    solid = false
+
+block
+    size = [24, 11]
+    pos = [624, 594]
+    color = 0xf7f7f7
+    solid = false
+
+block
+    size = [17, 14]
+    pos = [1584, 395]
+    color = 0xf7f7f7
+    solid = false
+
+block
+    size = [15, 7]
+    pos = [1731, 141]
+    color = 0xf7f7f7
+    solid = false
+
+block
+    size = [10, 15]
+    pos = [1344, 83]
+    color = 0xf7f7f7
+    solid = false
+
+block
+    size = [24, 14]
+    pos = [1810, 705]
+    color = 0xf7f7f7
+    solid = false
+
+block
+    size = [23, 21]
+    pos = [1632, 786]
+    color = 0xf7f7f7
+    solid = false
+
+block
+    size = [26, 14]
+    pos = [1298, 974]
+    color = 0xf7f7f7
+    solid = false
+
+block
+    size = [21, 20]
+    pos = [1081, 932]
+    color = 0xf7f7f7
+    solid = false
+
+block
+    size = [15, 14]
+    pos = [660, 956]
+    color = 0xf7f7f7
+    solid = false
+
+block
+    size = [8, 25]
+    pos = [105, 943]
+    color = 0xf7f7f7
+    solid = false
+
+block
+    size = [11, 15]
+    pos = [1885, 363]
+    color = 0xf7f7f7
+    solid = false
+
+block
+    size = [5, 23]
+    pos = [1, 585]
+    color = 0xf7f7f7
+    solid = false
