@@ -5,7 +5,7 @@ block
 
 block
     pos = [lx0.015, dx0.84]
-    text = 'Made by Movitovi'
+    text = 'Made by Movitovi, 2022'
     text_bold = true
     text_size = 32
     text_pos = [lx1, cx0.5]

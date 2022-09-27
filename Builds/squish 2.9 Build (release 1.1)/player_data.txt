@@ -1,25 +1,25 @@
 player
-    name = Player 1
-    base_color = 0xff0000
-    kills = 0
-    wins = 0
-    team = 0
+    name = Link
+    base_color = 0x008800
+    kills = 41
+    wins = 39
+    team = 2
     is_cpu = false
-    left = [-1, 97]
-    right = [-1, 100]
-    up = [-1, 119]
-    down = [-1, 115]
-    jump = [-1, 119]
-    shield = [-1, 1073742049]
-    ability = [-1, 32]
+    left = [1, 'axis', 0, -1]
+    right = [1, 'axis', 0, 1]
+    up = [1, 'axis', 1, -1]
+    down = [1, 'axis', 1, 1]
+    jump = [1, 'button', 0, 1]
+    shield = [1, 'axis', 5, 1]
+    ability = [1, 'axis', 4, 1]
 
 player
-    name = Player 2
-    base_color = 0x00cc00
-    kills = 0
-    wins = 0
-    team = 0
-    is_cpu = true
+    name = Link
+    base_color = 0x008800
+    kills = 14
+    wins = 10
+    team = 1
+    is_cpu = false
     left = [0, 'axis', 0, -1]
     right = [0, 'axis', 0, 1]
     up = [0, 'axis', 1, -1]
@@ -29,16 +29,16 @@ player
     ability = [0, 'axis', 4, 1]
 
 player
-    name = Player 3
-    base_color = 0x0000ff
-    kills = 0
-    wins = 0
-    team = 0
-    is_cpu = true
-    left = [1, 'axis', 0, -1]
-    right = [1, 'axis', 0, 1]
-    up = [1, 'axis', 1, -1]
-    down = [1, 'axis', 1, 1]
-    jump = [1, 'button', 0, 1]
-    shield = [1, 'axis', 5, 1]
-    ability = [1, 'axis', 4, 1]
+    name = Pikachu
+    base_color = 0xffff00
+    kills = 20
+    wins = 13
+    team = 1
+    is_cpu = false
+    left = [2, 'axis', 0, -1]
+    right = [2, 'axis', 0, 1]
+    up = [2, 'axis', 1, -1]
+    down = [2, 'axis', 1, 1]
+    jump = [2, 'button', 0, 1]
+    shield = [2, 'axis', 4, 1]
+    ability = [2, 'axis', 5, 1]

@@ -1,5 +1,5 @@
-volume = 35
-fullscreen = false
+volume = 37
+fullscreen = true
 resolution = [1280, 720]
 show_fps = true
 boosts_on = true
